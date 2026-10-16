@@ -1,0 +1,38 @@
+# Marshall Radio Telemetry Identity
+
+> Brand guidelines, tokens and logo files for Marshall Radio Telemetry (marshallradio.com), maker of GPS and radio telemetry tracking and recovery equipment for falconry, parrots and sporting dogs..
+
+Agent-readable brand guidance is plain Markdown:
+
+- [AGENTS](/AGENTS.md): rules that apply to every task, and the topic index
+- [DESIGN.md](/DESIGN.md): tokens and component specs in the DESIGN.md format
+- [brand.json](/brand.json): the same tokens and names as JSON
+- [Naming and brand architecture](/agents/naming.md): company, product-line and product names; URLs and file names.
+- [Approved facts](/agents/facts.md): the only facts, claims and contact details agents may state.
+- [Logo](/agents/logo.md): vector logo files and rules (clear space, minimum size, versions, don'ts).
+- [Color](/agents/color.md): palette: M Blue, M Red, Khaki Grey, Light Grey, Black, 20% tints.
+- [Typography](/agents/typography.md): Matter (Displaay), (Matter Regular (400) and Matter Bold (700)); type scale.
+- [Design tokens](/agents/tokens.md): CSS custom properties, Tailwind.
+- [Imagery and the arcs](/agents/imagery.md): photography and the graphic device.
+- [Voice](/agents/voice.md): principles, tone by channel, editorial rules, word list.
+- [Regions and languages](/agents/regions.md): regional sites and non-English content.
+- [Asset paths](/agents/assets.md): exact file paths.
+
+## Human pages
+
+The same guidance for people, one page per topic:
+
+- [Home](/): brand hub, popular assets, quick links
+- [Brand overview](/introduction/overview/): Introduction
+- [Product lines](/introduction/product-lines/): Introduction
+- [Brand architecture and naming](/naming/): Naming
+- [Logo](/brand-components/logo/): Brand components
+- [Colors](/brand-components/colors/): Brand components
+- [Typography](/brand-components/typography/): Brand components
+- [The arcs](/brand-components/arcs/): Brand components
+- [Photography](/brand-components/photography/): Brand components
+- [The Marshall voice](/writing/voice/): Voice & writing
+- [Approved facts](/writing/approved-facts/): Voice & writing
+- [Regions and languages](/regions/): Regions
+- [Design tokens](/resources/tokens/): Resources
+- [Brand kit](/resources/brand-kit/): Resources

@@ -1,0 +1,68 @@
+/* Marshall Radio Telemetry design tokens. Colors and logo rules:;
+ */
+/* Typography:. Matter (Displaay Type Foundry), Matter Regular (400) and Matter Bold (700).
+ License note: the font files are not hosted here (the Displaay license forbids public servers);
+ @font-face uses locally installed Matter, otherwise the fallback stack applies. */
+@font-face{font-family:"Matter";font-weight:400;font-style:normal;font-display:swap;src:local("Matter Regular"),local("Matter-Regular"),local("Matter");}
+@font-face{font-family:"Matter";font-weight:700;font-style:normal;font-display:swap;src:local("Matter Bold"),local("Matter-Bold");}
+:root {
+ /* Colors:. Tints follow the guide's 20% tint step system. */
+ --mrt-color-blue: #1B3A6A; /* M Blue · RGB 27, 58, 106 · CMYK 100, 85, 30, 20 */
+ --mrt-color-red: #8A2F1D; /* M Red · RGB 138, 47, 29 · CMYK 30, 90, 100, 30 */
+ --mrt-color-khaki: #C6C7BB; /* Khaki Grey · RGB 198, 199, 187 · CMYK 23, 16, 25, 0 · PMS 129U */
+ --mrt-color-light-grey: #F1F1F1; /* Light Grey · RGB 241, 241, 241 · CMYK 4, 3, 3, 0 */
+ --mrt-color-black: #171D1A; /* Black · RGB 23, 29, 26 · CMYK 75, 64, 68, 77 */
+ --mrt-color-white: #FFFFFF; /* utility: true white, use sparingly */
+ --mrt-color-blue-80: #496188; /* Blue 80% */
+ --mrt-color-blue-60: #7689A6; /* Blue 60% */
+ --mrt-color-blue-40: #A4B0C3; /* Blue 40% */
+ --mrt-color-blue-20: #D1D8E1; /* Blue 20% */
+ --mrt-color-red-80: #A1594A; /* Red 80% */
+ --mrt-color-red-60: #B98277; /* Red 60% */
+ --mrt-color-red-40: #D0ACA5; /* Red 40% */
+ --mrt-color-red-20: #E8D5D2; /* Red 20% */
+ --mrt-color-black-80: #454A48; /* Black 80% */
+ --mrt-color-black-60: #747776; /* Black 60% */
+ --mrt-color-black-40: #A2A5A3; /* Black 40% */
+ --mrt-color-black-20: #D1D2D1; /* Black 20% */
+ --mrt-font-heading: "Matter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ --mrt-font-body: "Matter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ --mrt-font-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
+ --mrt-space-1: 4px;
+ --mrt-space-2: 8px;
+ --mrt-space-3: 12px;
+ --mrt-space-4: 16px;
+ --mrt-space-6: 24px;
+ --mrt-space-8: 32px;
+ --mrt-space-12: 48px;
+ --mrt-space-16: 64px;
+ --mrt-space-24: 96px;
+ --mrt-radius-sm: 4px;
+ --mrt-radius-md: 8px;
+ --mrt-radius-lg: 12px;
+ --mrt-type-display: 700 65px/1.05 var(--mrt-font-heading);
+ --mrt-type-h1: 700 42px/1.15 var(--mrt-font-heading);
+ --mrt-type-h2: 700 30px/1.2 var(--mrt-font-heading);
+ --mrt-type-h3: 700 22px/1.3 var(--mrt-font-heading);
+ --mrt-type-label: 700 18px/1.3 var(--mrt-font-heading);
+ --mrt-type-body: 400 16px/1.6 var(--mrt-font-body);
+ --mrt-type-small: 400 14px/1.5 var(--mrt-font-body);
+ --mrt-type-caption: 400 13px/1.4 var(--mrt-font-body);
+ --mrt-bg-canvas: var(--mrt-color-white);
+ --mrt-bg-panel: var(--mrt-color-light-grey);
+ --mrt-bg-inverse: var(--mrt-color-black);
+ --mrt-text-heading: var(--mrt-color-blue);
+ --mrt-text-body: var(--mrt-color-black);
+ --mrt-text-caption: var(--mrt-color-black-80);
+ --mrt-text-accent: var(--mrt-color-red);
+ --mrt-link: var(--mrt-color-blue);
+ --mrt-link-hover: var(--mrt-color-blue-80);
+ --mrt-action: var(--mrt-color-blue);
+ --mrt-action-hover: var(--mrt-color-blue-80);
+ --mrt-on-action: var(--mrt-color-white);
+ --mrt-border: var(--mrt-color-black-20);
+ --mrt-focus: var(--mrt-color-red);
+ --mrt-dark-text-heading: var(--mrt-color-white);
+ --mrt-dark-text-body: var(--mrt-color-light-grey);
+ --mrt-dark-accent: var(--mrt-color-red-40);
+}

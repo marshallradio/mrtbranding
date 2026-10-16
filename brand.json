@@ -1,0 +1,346 @@
+{
+  "name": "Marshall Radio Telemetry",
+  "website": "https://www.marshallradio.com",
+  "tagline": {
+    "text": "The most carefully engineered and reliable tracking system available."
+  },
+  "description": {
+    "text": "Marshall Radio Telemetry designs and supplies premium GPS long-range tracking and recovery equipment to hunters, parrot free fliers, rocketry, and competitors around the world."
+  },
+  "names": {
+    "full": "Marshall Radio Telemetry",
+    "short": [
+      "Marshall Radio",
+      "Marshall"
+    ],
+    "avoid": [
+      "MRT (customer copy)"
+    ]
+  },
+  "productLines": [
+    "Falconry Products",
+    "Parrot Products",
+    "Sporting Dogs",
+    "Apparel",
+    "Favorite Reads",
+    "Services"
+  ],
+  "colors": {
+    "blue": {
+      "name": "M Blue",
+      "hex": "#1B3A6A",
+      "rgb": "27, 58, 106",
+      "cmyk": "100, 85, 30, 20",
+      "role": "Primary: wordmark, arcs, headings, buttons, dark panels"
+    },
+    "red": {
+      "name": "M Red",
+      "hex": "#8A2F1D",
+      "rgb": "138, 47, 29",
+      "cmyk": "30, 90, 100, 30",
+      "role": "Accent: logo ring and RADIO TELEMETRY, section headings, one highlight"
+    },
+    "khaki": {
+      "name": "Khaki Grey",
+      "hex": "#C6C7BB",
+      "rgb": "198, 199, 187",
+      "cmyk": "23, 16, 25, 0",
+      "pantone": "PMS 129U (as printed in the guide)",
+      "role": "Secondary: soft backgrounds, text/icons on Blue (6.61:1)"
+    },
+    "light-grey": {
+      "name": "Light Grey",
+      "hex": "#F1F1F1",
+      "rgb": "241, 241, 241",
+      "cmyk": "4, 3, 3, 0",
+      "role": "Preferred over true white: page and panel backgrounds, text on Blue/Black"
+    },
+    "black": {
+      "name": "Black",
+      "hex": "#171D1A",
+      "rgb": "23, 29, 26",
+      "cmyk": "75, 64, 68, 77",
+      "role": "Preferred over true black: body text, dark bands"
+    },
+    "white": {
+      "hex": "#FFFFFF"
+    },
+    "blue-80": {
+      "hex": "#496188"
+    },
+    "blue-60": {
+      "hex": "#7689A6"
+    },
+    "blue-40": {
+      "hex": "#A4B0C3"
+    },
+    "blue-20": {
+      "hex": "#D1D8E1"
+    },
+    "red-80": {
+      "hex": "#A1594A"
+    },
+    "red-60": {
+      "hex": "#B98277"
+    },
+    "red-40": {
+      "hex": "#D0ACA5"
+    },
+    "red-20": {
+      "hex": "#E8D5D2"
+    },
+    "black-80": {
+      "hex": "#454A48"
+    },
+    "black-60": {
+      "hex": "#747776"
+    },
+    "black-40": {
+      "hex": "#A2A5A3"
+    },
+    "black-20": {
+      "hex": "#D1D2D1"
+    }
+  },
+  "semantic": {
+    "bg-canvas": "#FFFFFF",
+    "bg-panel": "#F1F1F1",
+    "bg-inverse": "#171D1A",
+    "text-heading": "#1B3A6A",
+    "text-body": "#171D1A",
+    "text-caption": "#454A48",
+    "text-accent": "#8A2F1D",
+    "link": "#1B3A6A",
+    "link-hover": "#496188",
+    "action": "#1B3A6A",
+    "action-hover": "#496188",
+    "on-action": "#FFFFFF",
+    "border": "#D1D2D1",
+    "focus": "#8A2F1D",
+    "dark-text-heading": "#FFFFFF",
+    "dark-text-body": "#F1F1F1",
+    "dark-accent": "#D0ACA5"
+  },
+  "typography": {
+    "fonts": {
+      "heading": "\"Matter\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "body": "\"Matter\", \"Helvetica Neue\", Helvetica, Arial, sans-serif",
+      "mono": "Menlo, Monaco, Consolas, \"Courier New\", monospace"
+    },
+    "foundry": "Displaay Type Foundry s.r.o. (designer Martin Vácha), https://displaay.net",
+    "weights": [
+      400,
+      700
+    ],
+    "license": "Commercial. Embedded license forbids modifying, redistributing or storing the files on publicly accessible servers; files are not hosted on this site. Web embedding requires a Displaay web license: https://displaay.net/about/licenses/",
+    "scale": {
+      "display": {
+        "font": "heading",
+        "sizePx": 65,
+        "lineHeight": 1.05,
+        "weight": 700
+      },
+      "h1": {
+        "font": "heading",
+        "sizePx": 42,
+        "lineHeight": 1.15,
+        "weight": 700
+      },
+      "h2": {
+        "font": "heading",
+        "sizePx": 30,
+        "lineHeight": 1.2,
+        "weight": 700
+      },
+      "h3": {
+        "font": "heading",
+        "sizePx": 22,
+        "lineHeight": 1.3,
+        "weight": 700
+      },
+      "label": {
+        "font": "heading",
+        "sizePx": 18,
+        "lineHeight": 1.3,
+        "weight": 700
+      },
+      "body": {
+        "font": "body",
+        "sizePx": 16,
+        "lineHeight": 1.6,
+        "weight": 400
+      },
+      "small": {
+        "font": "body",
+        "sizePx": 14,
+        "lineHeight": 1.5,
+        "weight": 400
+      },
+      "caption": {
+        "font": "body",
+        "sizePx": 13,
+        "lineHeight": 1.4,
+        "weight": 400
+      }
+    },
+    "usage": "Regular 400 for body and UI text; Bold 700 for headings, labels, the header label and emphasis",
+    "set": "Matter Regular and Matter Bold"
+  },
+  "spacePx": {
+    "1": 4,
+    "2": 8,
+    "3": 12,
+    "4": 16,
+    "6": 24,
+    "8": 32,
+    "12": 48,
+    "16": 64,
+    "24": 96
+  },
+  "radiusPx": {
+    "sm": 4,
+    "md": 8,
+    "lg": 12
+  },
+  "logos": {
+    "primary": "/assets/logos/mrt-logo.svg",
+    "light": "/assets/logos/mrt-logo-light.svg",
+    "white": "/assets/logos/mrt-logo-white.svg",
+    "mono": "/assets/logos/mrt-logo-mono.svg",
+    "icon": "/assets/logos/mrt-mark.svg",
+    "iconWhite": "/assets/logos/mrt-mark-white.svg",
+    "png": "/assets/logos/mrt-logo-2400.png",
+    "favicon": "/assets/logos/mrt-site-icon-16.png",
+    "vectorAvailable": true,
+    "rules": {
+      "clearSpace": "Height of the Marshall icon on all four sides",
+      "minSize": {
+        "lockup": "2cm print / 50px screen height",
+        "icon": "2cm / 50px",
+        "wordmark": "2cm / 18px"
+      },
+      "dont": [
+        "stretch, squash, skew or distort",
+        "edit colors, off-brand colors or reduced opacity",
+        "effects such as drop shadows",
+        "high-contrast patterns or busy photos",
+        "change layout of elements",
+        "encroach on clear space"
+      ],
+      "headerException": {
+        "heightPx": 30,
+        "note": "The site header shows the logo at 30px high; everywhere else the 50px minimum applies."
+      }
+    }
+  },
+  "agents": "/AGENTS.md",
+  "humanPages": [
+    {
+      "path": "/",
+      "title": "Home",
+      "group": "Home"
+    },
+    {
+      "path": "/introduction/overview/",
+      "title": "Brand overview",
+      "group": "Introduction"
+    },
+    {
+      "path": "/introduction/product-lines/",
+      "title": "Product lines",
+      "group": "Introduction"
+    },
+    {
+      "path": "/naming/",
+      "title": "Brand architecture and naming",
+      "group": "Naming"
+    },
+    {
+      "path": "/brand-components/logo/",
+      "title": "Logo",
+      "group": "Brand components"
+    },
+    {
+      "path": "/brand-components/colors/",
+      "title": "Colors",
+      "group": "Brand components"
+    },
+    {
+      "path": "/brand-components/typography/",
+      "title": "Typography",
+      "group": "Brand components"
+    },
+    {
+      "path": "/brand-components/arcs/",
+      "title": "The arcs",
+      "group": "Brand components"
+    },
+    {
+      "path": "/brand-components/photography/",
+      "title": "Photography",
+      "group": "Brand components"
+    },
+    {
+      "path": "/writing/voice/",
+      "title": "The Marshall voice",
+      "group": "Voice & writing"
+    },
+    {
+      "path": "/writing/approved-facts/",
+      "title": "Approved facts",
+      "group": "Voice & writing"
+    },
+    {
+      "path": "/regions/",
+      "title": "Regions and languages",
+      "group": "Regions"
+    },
+    {
+      "path": "/resources/tokens/",
+      "title": "Design tokens",
+      "group": "Resources"
+    },
+    {
+      "path": "/resources/brand-kit/",
+      "title": "Brand kit",
+      "group": "Resources"
+    }
+  ],
+  "hubArtwork": {
+    "artwork": [
+      "/assets/artwork/agents.svg",
+      "/assets/artwork/arcs.svg",
+      "/assets/artwork/brand-kit.svg",
+      "/assets/artwork/colors.svg",
+      "/assets/artwork/facts.svg",
+      "/assets/artwork/logo.svg",
+      "/assets/artwork/naming.svg",
+      "/assets/artwork/overview.svg",
+      "/assets/artwork/photography.svg",
+      "/assets/artwork/product-lines.svg",
+      "/assets/artwork/regions.svg",
+      "/assets/artwork/tokens.svg",
+      "/assets/artwork/typography.svg",
+      "/assets/artwork/voice.svg"
+    ],
+    "icons": [
+      "/assets/icons/agents.svg",
+      "/assets/icons/arcs.svg",
+      "/assets/icons/book.svg",
+      "/assets/icons/color.svg",
+      "/assets/icons/download.svg",
+      "/assets/icons/facts.svg",
+      "/assets/icons/layers.svg",
+      "/assets/icons/link.svg",
+      "/assets/icons/logo.svg",
+      "/assets/icons/naming.svg",
+      "/assets/icons/photo.svg",
+      "/assets/icons/regions.svg",
+      "/assets/icons/signal.svg",
+      "/assets/icons/tokens.svg",
+      "/assets/icons/type.svg",
+      "/assets/icons/voice.svg"
+    ],
+    "rules": "Palette and 20% tints only, following the pairing rules (no Blue with Red, no Blue with Black); icons on a 24px grid, 2px rounded stroke in M Blue on Light Grey or Blue 20 boxes; never replaces photography or the logo"
+  }
+}
