@@ -1,0 +1,19 @@
+# Binghalib Identity
+
+> The Binghalib Group brand hub: logos, colours, typography, voice and sub-brand guidance for the Binghalib Group of Companies and its 16 companies.
+
+Agent-readable brand guidance is plain Markdown:
+
+- [AGENTS.md](https://sbinghalib.github.io/binghalib/AGENTS.md): rules that apply to every task, and the topic index
+- [Design tokens (CSS)](https://sbinghalib.github.io/binghalib/assets/css/tokens.css): brand values as CSS custom properties
+- [Naming](https://sbinghalib.github.io/binghalib/agents/naming.md): Writing the group or any company name, in English or Arabic; URLs and file names.
+- [Logo](https://sbinghalib.github.io/binghalib/agents/logo.md): Placing the Binghalib Group logo or emblem in any design; choosing a logo file.
+- [Colour](https://sbinghalib.github.io/binghalib/agents/colour.md): Choosing any colour for design, slides, documents, charts or UI.
+- [Typography](https://sbinghalib.github.io/binghalib/agents/typography.md): Setting any text: fonts, weights, sizes, line heights. Why Bauhaus is never live text.
+- [Design tokens](https://sbinghalib.github.io/binghalib/agents/tokens.md): Writing CSS, components, chart themes or any code that needs brand values.
+- [Sub-brands (16 companies)](https://sbinghalib.github.io/binghalib/agents/sub-brands.md): Anything for a specific company: its logo file, its own palette, how the group endorses it.
+- [Arabic and bilingual](https://sbinghalib.github.io/binghalib/agents/arabic.md): Anything with Arabic text or bilingual Arabic/English layouts.
+- [Photography and icons](https://sbinghalib.github.io/binghalib/agents/imagery.md): Choosing photos or drawing icons.
+- [Voice and writing](https://sbinghalib.github.io/binghalib/agents/voice.md): Writing or editing English copy: proposals, tenders, web, social, email.
+- [Templates](https://sbinghalib.github.io/binghalib/agents/templates.md): Slides, letterheads, business cards, email signatures.
+- [Asset URLs](https://sbinghalib.github.io/binghalib/agents/assets.md): You need the exact URL or file name of a downloadable file.
