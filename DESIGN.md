@@ -48,21 +48,25 @@ typography:
  fontSize: "65px"
  fontWeight: 700
  lineHeight: 1.05
+ letterSpacing: "-0.035em"
  h1:
  fontFamily: "Matter, Helvetica Neue, Helvetica, Arial, sans-serif"
  fontSize: "42px"
  fontWeight: 700
  lineHeight: 1.15
+ letterSpacing: "-0.02em"
  h2:
  fontFamily: "Matter, Helvetica Neue, Helvetica, Arial, sans-serif"
  fontSize: "30px"
  fontWeight: 700
  lineHeight: 1.2
+ letterSpacing: "-0.015em"
  h3:
  fontFamily: "Matter, Helvetica Neue, Helvetica, Arial, sans-serif"
  fontSize: "22px"
  fontWeight: 700
  lineHeight: 1.3
+ letterSpacing: "-0.015em"
  label:
  fontFamily: "Matter, Helvetica Neue, Helvetica, Arial, sans-serif"
  fontSize: "18px"
@@ -136,7 +140,7 @@ Marshall Radio Telemetry builds tracking and recovery equipment: GPS systems, VH
 - No other colors. Don't pair Blue with Red or Black for text; keep text contrast ≥ 4.5:1.
 
 ## Typography
-: **Matter** (Displaay Type Foundry), for headings, body and UI. Matter Regular (400) and Matter Bold (700). Headings in Bold 700 (page titles 65px, section headings 42px), body in Regular 400. Fallback: Helvetica Neue, Helvetica, Arial, sans-serif. Matter is a commercial typeface by Displaay Type Foundry (displaay.net). Its embedded license forbids storing the font files on publicly accessible servers, modifying or redistributing them, so this public site does not host them: browsers use an installed copy of Matter if present, otherwise the fallback stack. Web embedding needs a Displaay web license (https://displaay.net/about/licenses/). The logo's italic lettering is artwork and is never set in a font.
+: **Matter** (Displaay Type Foundry), for headings, body and UI. Matter Regular (400) and Matter Bold (700). Headings in Bold 700 (page titles 65px, section headings 42px), body in Regular 400. Fallback: Helvetica Neue, Helvetica, Arial, sans-serif. On this V2 preview branch the font files are hosted for visual review; confirm your Displaay license before public production use. Optional tracking for crispness: Display ≥ 42px: -0.03em to -0.04em; H2/H3: -0.015em to -0.02em; body: 0. The logo's italic lettering is artwork and is never set in a font.
 
 ## Layout
 Centred content up to about 1170px (Bootstrap container), generous vertical padding (the site uses 90px for product sections), product lines shown as a row of photo tiles with short labels.
