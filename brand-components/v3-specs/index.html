@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V3 Design Specs · Marshall Radio Telemetry</title>
+<meta name="description" content="V3 design specifications: colors, typography, UI elements, and branding direction.">
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
+<script src="../../assets/js/nav.js?v=0970a167" defer></script>
+<style>
+body { background: #F7F7F5; }
+.spec { margin: 40px 0; }
+.spec h2 { font: 700 28px/1.2 var(--mrt-font-heading); color: #123A5F; margin-bottom: 16px; }
+.swatch-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.swatch { width: 80px; }
+.swatch div { height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+.swatch span { display: block; font-size: 12px; margin-top: 6px; color: #444; }
+.type-sample { margin: 12px 0; }
+.ui-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+.pill { padding: 6px 14px; border-radius: 999px; font: 700 13px/1.2 var(--mrt-font-body); background: white; border: 1px solid rgba(18,58,95,0.15); color: #123A5F; }
+.pill.on { background: #123A5F; color: white; }
+.badge { padding: 2px 8px; border-radius: 6px; font: 700 11px/1.4 var(--mrt-font-body); background: #3B82F6; color: white; }
+.badge.red { background: #E04A2F; }
+.badge.black { background: #0F1412; }
+.deck-card { background: white; border: 1px solid rgba(18,58,95,0.1); border-radius: 12px; padding: 32px; max-width: 560px; margin: 12px 0; }
+.hc-card { background: #123A5F; border-radius: 12px; padding: 32px; max-width: 560px; margin: 12px 0; color: white; }
+.note { font-size: 14px; color: #555; margin-top: 12px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="168" height="30"><span>Brand Guidelines</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Home</a>
+    <a href="../../brand-components/typography/">Typography</a>
+    <a href="../web-ui/">Web UI</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+<article>
+  <h1>V3 design specs</h1>
+  <p class="lead">Working specification based on the V3 direction. Colors, type, and UI elements refined from the current system.</p>
+
+  <div class="spec">
+    <h2>Color</h2>
+    <div class="swatch-row">
+      <div class="swatch"><div style="background:#123A5F"></div><span>Refined Blue<br>#123A5F</span></div>
+      <div class="swatch"><div style="background:#3B82F6"></div><span>Vivid Blue<br>#3B82F6</span></div>
+      <div class="swatch"><div style="background:#E04A2F"></div><span>Signal Red<br>#E04A2F</span></div>
+      <div class="swatch"><div style="background:#D97706"></div><span>Amber<br>#D97706</span></div>
+      <div class="swatch"><div style="background:#059669"></div><span>Green<br>#059669</span></div>
+      <div class="swatch"><div style="background:#0F1412"></div><span>Near Black<br>#0F1412</span></div>
+      <div class="swatch"><div style="background:#F7F7F5"></div><span>Warm White<br>#F7F7F5</span></div>
+    </div>
+    <p class="note">Primary pairings: Refined Blue on Warm White, white on Refined Blue, Near Black on Warm White. Signal Red for emphasis and errors only.</p>
+  </div>
+
+  <div class="spec">
+    <h2>Typography</h2>
+    <div class="type-sample" style="font:700 56px/1.05 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.03em">Display 56px</div>
+    <div class="type-sample" style="font:700 42px/1.15 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.02em">Title 42px</div>
+    <div class="type-sample" style="font:700 22px/1.3 var(--mrt-font-heading);color:#123A5F">Heading 22px</div>
+    <div class="type-sample" style="font:400 16px/1.65 var(--mrt-font-body)">Body 16px / 1.65. Matter Regular.</div>
+    <div class="type-sample" style="font:400 13px/1.5 var(--mrt-font-body);color:#555">Small 13px. For captions and secondary text.</div>
+    <p class="note">Matter Regular 400 and Bold 700 only. Tight tracking on display sizes. Open line-height on body.</p>
+  </div>
+
+  <div class="spec">
+    <h2>UI elements</h2>
+    <p><strong>Filter pills</strong></p>
+    <div class="ui-row">
+      <span class="pill on">All</span>
+      <span class="pill">Falconry</span>
+      <span class="pill">GPS</span>
+    </div>
+    <p style="margin-top:16px"><strong>Badges</strong></p>
+    <div class="ui-row">
+      <span class="badge">Active</span>
+      <span class="badge red">Alert</span>
+      <span class="badge black">Legacy</span>
+    </div>
+    <p class="note">Outline-first buttons. Soft glass surfaces. No heavy fills except for high-contrast action panels.</p>
+  </div>
+
+  <div class="spec">
+    <h2>Deck title + subtitle</h2>
+    <div class="deck-card">
+      <div style="font:700 42px/1.15 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.02em;margin:0 0 8px">Field Marshall 4000</div>
+      <div style="font:400 18px/1.4 var(--mrt-font-body);color:#555;margin:0">VHF tracking for falconry and sporting dogs</div>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>High contrast</h2>
+    <div class="hc-card">
+      <div style="font:700 48px/1.05 var(--mrt-font-heading);letter-spacing:-0.03em;margin:0 0 8px">Field Marshall 4000</div>
+      <div style="font:400 18px/1.4 var(--mrt-font-body);color:rgba(255,255,255,0.85);margin:0">Maximum clarity for primary actions and key messages</div>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Arcs</h2>
+    <p>Single thin vector stroke. Very low opacity (4–8%). Refined Blue or near-black on light; white on dark. Large, cropped, never filled. One per layout.</p>
+  </div>
+
+  <p class="note" style="margin-top:40px">Working V3 specification. Current guidelines remain until this direction is approved.</p>
+</article>
+</main></div>
+
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · V3 design specs</p></div></footer>
+</body>
+</html>
