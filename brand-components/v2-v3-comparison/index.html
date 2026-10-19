@@ -20,49 +20,22 @@ body {
   -webkit-backdrop-filter: blur(18px);
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 16px;
-  box-shadow:
-    0 12px 40px rgba(18,58,95,0.1),
-    0 0 30px rgba(18,58,95,0.06),
-    inset 0 1px 0 rgba(255,255,255,0.8),
-    inset 0 -1px 0 rgba(18,58,95,0.05);
+  box-shadow: 0 12px 40px rgba(18,58,95,0.1), 0 0 30px rgba(18,58,95,0.06), inset 0 1px 0 rgba(255,255,255,0.8);
   overflow: hidden;
 }
 .glass::before {
   content: "";
   position: absolute;
   inset: -20%;
-  background: conic-gradient(
-    from 180deg at 70% 30%,
-    rgba(18,58,95,0.18),
-    rgba(224,74,47,0.12),
-    rgba(100,180,255,0.15),
-    rgba(255,255,255,0.25),
-    rgba(18,58,95,0.1)
-  );
+  background: conic-gradient(from 180deg at 70% 30%, rgba(18,58,95,0.18), rgba(224,74,47,0.12), rgba(100,180,255,0.15), rgba(255,255,255,0.25), rgba(18,58,95,0.1));
   filter: blur(28px);
   opacity: 0.55;
   pointer-events: none;
   animation: prismShift 8s ease-in-out infinite alternate;
 }
-.glass::after {
-  content: "";
-  position: absolute;
-  top: 0; left: -100%;
-  width: 60%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
-  transform: skewX(-20deg);
-  animation: shine 6s ease-in-out infinite;
-  pointer-events: none;
-}
 @keyframes prismShift {
   0% { transform: rotate(0deg) scale(1); opacity: 0.45; }
   100% { transform: rotate(12deg) scale(1.05); opacity: 0.65; }
-}
-@keyframes shine {
-  0% { left: -100%; }
-  40% { left: 140%; }
-  100% { left: 140%; }
 }
 .panel-header {
   position: relative;
@@ -75,12 +48,7 @@ body {
   cursor: move;
   user-select: none;
 }
-.panel-header .title {
-  font-weight: 700;
-  font-size: 14px;
-  color: #123A5F;
-  text-shadow: 0 0 12px rgba(18,58,95,0.2);
-}
+.panel-header .title { font-weight: 700; font-size: 14px; color: #123A5F; }
 .controls { display: flex; gap: 6px; }
 .ctrl {
   width: 22px; height: 22px;
@@ -88,12 +56,9 @@ body {
   border: 1px solid rgba(18,58,95,0.2);
   background: rgba(255,255,255,0.45);
   font-size: 12px;
-  line-height: 1;
   cursor: pointer;
   color: #123A5F;
-  box-shadow: 0 0 8px rgba(18,58,95,0.08);
 }
-.ctrl:hover { background: rgba(255,255,255,0.75); }
 .panel-body { position: relative; z-index: 1; padding: 16px; }
 .btn {
   display: inline-block;
@@ -105,75 +70,64 @@ body {
   border: 1px solid rgba(18,58,95,0.25);
   color: #123A5F;
   cursor: pointer;
-  box-shadow: 0 0 16px rgba(18,58,95,0.1);
 }
-.btn-danger {
-  border-color: rgba(224,74,47,0.4);
-  color: #E04A2F;
-  box-shadow: 0 0 16px rgba(224,74,47,0.12);
-}
-table.ui {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-table.ui th {
-  text-align: left;
-  font-weight: 700;
-  padding: 10px 12px;
-  color: #123A5F;
-  border-bottom: 1px solid rgba(18,58,95,0.12);
-}
-table.ui td {
-  padding: 10px 12px;
-  border-bottom: 1px solid rgba(18,58,95,0.07);
-}
-table.ui tr:hover { background: rgba(18,58,95,0.04); }
+.btn-danger { border-color: rgba(224,74,47,0.4); color: #E04A2F; }
+table.ui { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.ui th { text-align: left; font-weight: 700; padding: 10px 12px; color: #123A5F; border-bottom: 1px solid rgba(18,58,95,0.12); }
+table.ui td { padding: 10px 12px; border-bottom: 1px solid rgba(18,58,95,0.07); }
 .gantt { font-size: 13px; }
-.gantt-header {
-  display: grid;
-  grid-template-columns: 120px repeat(8, 1fr);
-  gap: 4px;
-  margin-bottom: 8px;
-  font-weight: 700;
+.gantt-header { display: grid; grid-template-columns: 120px repeat(8, 1fr); gap: 4px; margin-bottom: 8px; font-weight: 700; color: #123A5F; opacity: 0.75; }
+.gantt-row { display: grid; grid-template-columns: 120px 1fr; gap: 10px; align-items: center; margin-bottom: 8px; }
+.gantt-bar { height: 14px; background: linear-gradient(90deg, rgba(18,58,95,0.2), rgba(100,180,255,0.25)); border: 1px solid rgba(18,58,95,0.3); border-radius: 6px; }
+.notice { background: rgba(253,242,240,0.55); border: 1px solid rgba(224,74,47,0.18); color: #5C2A22; padding: 12px 16px; border-radius: 8px; font-size: 13px; margin-top: 12px; }
+.workspace { position: relative; min-height: 900px; }
+.draggable { position: absolute; width: 320px; z-index: 2; }
+
+/* Ultra light */
+.ultra-light {
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(18,58,95,0.08);
+  box-shadow: 0 4px 24px rgba(18,58,95,0.04);
+}
+.ultra-light::before { opacity: 0.2; }
+.ultra-light .panel-header .title { color: #0F1412; }
+.ultra-light .ctrl { border-color: rgba(0,0,0,0.1); color: #0F1412; }
+
+/* Ultra dark */
+.ultra-dark {
+  background: rgba(15,20,18,0.85);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3), 0 0 30px rgba(18,58,95,0.2);
+  color: #F7F7F5;
+}
+.ultra-dark::before {
+  background: conic-gradient(from 180deg at 70% 30%, rgba(18,58,95,0.4), rgba(224,74,47,0.25), rgba(100,180,255,0.3), rgba(255,255,255,0.1));
+  opacity: 0.4;
+}
+.ultra-dark .panel-header { border-bottom-color: rgba(255,255,255,0.1); }
+.ultra-dark .panel-header .title { color: #F7F7F5; text-shadow: 0 0 12px rgba(255,255,255,0.2); }
+.ultra-dark .ctrl { border-color: rgba(255,255,255,0.2); color: #F7F7F5; background: rgba(255,255,255,0.1); }
+.ultra-dark table.ui th, .ultra-dark table.ui td { color: #F7F7F5; border-color: rgba(255,255,255,0.1); }
+.ultra-dark .btn { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #F7F7F5; }
+
+/* High contrast action */
+.high-contrast {
+  background: #123A5F;
+  border: 1px solid #0A2540;
+  color: white;
+  box-shadow: 0 8px 32px rgba(18,58,95,0.35);
+}
+.high-contrast::before { display: none; }
+.high-contrast .panel-header { border-bottom-color: rgba(255,255,255,0.15); }
+.high-contrast .panel-header .title { color: white; }
+.high-contrast .ctrl { border-color: rgba(255,255,255,0.3); color: white; background: rgba(255,255,255,0.1); }
+.high-contrast .btn {
+  background: white;
   color: #123A5F;
-  opacity: 0.75;
+  border: none;
+  font-weight: 700;
 }
-.gantt-row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 10px;
-  align-items: center;
-  margin-bottom: 8px;
-}
-.gantt-bar {
-  height: 14px;
-  background: linear-gradient(90deg, rgba(18,58,95,0.2), rgba(100,180,255,0.25));
-  border: 1px solid rgba(18,58,95,0.3);
-  border-radius: 6px;
-  position: relative;
-  box-shadow: 0 0 16px rgba(18,58,95,0.15);
-}
-.notice {
-  background: rgba(253,242,240,0.55);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(224,74,47,0.18);
-  color: #5C2A22;
-  padding: 12px 16px;
-  border-radius: 8px;
-  font-size: 13px;
-  margin-top: 12px;
-  box-shadow: 0 0 20px rgba(224,74,47,0.1);
-}
-.workspace {
-  position: relative;
-  min-height: 600px;
-}
-.draggable {
-  position: absolute;
-  width: 340px;
-  z-index: 2;
-}
+.high-contrast .btn-danger { background: #E04A2F; color: white; }
 </style>
 </head>
 <body>
@@ -190,7 +144,7 @@ table.ui tr:hover { background: rgba(18,58,95,0.04); }
 <main><div class="wrap">
 <article>
   <h1>V3 interface</h1>
-  <p class="lead">Airy glass surfaces with stronger prism and holographic light. Drag the panels by their headers.</p>
+  <p class="lead">Glass, ultra-light, ultra-dark, and high-contrast action panels. Drag any panel by its header.</p>
 
   <div class="workspace">
     <div class="draggable glass" style="top:20px; left:0" data-draggable>
@@ -210,34 +164,55 @@ table.ui tr:hover { background: rgba(18,58,95,0.04); }
       </div>
     </div>
 
-    <div class="draggable glass" style="top:20px; left:380px" data-draggable>
+    <div class="draggable glass" style="top:20px; left:360px" data-draggable>
       <div class="panel-header">
         <span class="title">Schedule</span>
         <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
       </div>
       <div class="panel-body gantt">
         <div class="gantt-header"><span></span><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>
-        <div class="gantt-row"><span>Research</span><div style="position:relative"><div class="gantt-bar" style="width:32%"></div></div></div>
-        <div class="gantt-row"><span>Prototype</span><div style="position:relative"><div class="gantt-bar" style="width:40%; margin-left:18%"></div></div></div>
-        <div class="gantt-row"><span>Field test</span><div style="position:relative"><div class="gantt-bar" style="width:28%; margin-left:52%"></div></div></div>
+        <div class="gantt-row"><span>Research</span><div><div class="gantt-bar" style="width:32%"></div></div></div>
+        <div class="gantt-row"><span>Prototype</span><div><div class="gantt-bar" style="width:40%; margin-left:18%"></div></div></div>
+        <div class="gantt-row"><span>Field test</span><div><div class="gantt-bar" style="width:28%; margin-left:52%"></div></div></div>
       </div>
     </div>
 
-    <div class="draggable glass" style="top:280px; left:40px" data-draggable>
+    <div class="draggable ultra-light" style="top:280px; left:0" data-draggable>
       <div class="panel-header">
-        <span class="title">Actions</span>
+        <span class="title">Ultra light</span>
         <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
       </div>
       <div class="panel-body">
-        <button class="btn">Save</button>
-        <button class="btn">Export</button>
-        <button class="btn btn-danger">Delete</button>
-        <div class="notice">Connection lost. Retry when signal returns.</div>
+        <p style="margin:0 0 12px; font-size:14px">Near-white surface. Minimal prism. Best for reading and forms.</p>
+        <button class="btn">Continue</button>
+      </div>
+    </div>
+
+    <div class="draggable ultra-dark" style="top:280px; left:360px" data-draggable>
+      <div class="panel-header">
+        <span class="title">Ultra dark</span>
+        <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 12px; font-size:14px">Near-black glass. Stronger glow. Good for focus or night use.</p>
+        <button class="btn">Confirm</button>
+      </div>
+    </div>
+
+    <div class="draggable high-contrast" style="top:480px; left:180px" data-draggable>
+      <div class="panel-header">
+        <span class="title">High contrast action</span>
+        <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
+      </div>
+      <div class="panel-body">
+        <p style="margin:0 0 12px; font-size:14px">Solid refined blue. Maximum clarity for primary actions.</p>
+        <button class="btn">Save changes</button>
+        <button class="btn btn-danger" style="margin-left:8px">Delete</button>
       </div>
     </div>
   </div>
 
-  <p class="note" style="margin-top:40px">Panels are draggable by the header. Close and minimize buttons are visual only in this demo.</p>
+  <p class="note" style="margin-top:40px">Drag any panel by its header. Close and minimize are visual only.</p>
 </article>
 </main></div>
 
