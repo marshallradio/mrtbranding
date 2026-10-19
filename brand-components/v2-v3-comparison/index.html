@@ -313,6 +313,58 @@ ul.vivid.square li::before { border-radius: 2px; }
   max-width: 640px;
 }
 
+
+.hc-title {
+  font: 700 56px/1.05 var(--mrt-font-heading);
+  letter-spacing: -0.03em;
+  color: white;
+  margin: 0 0 8px;
+}
+.hc-sub {
+  font: 400 18px/1.4 var(--mrt-font-body);
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+.hc-card {
+  background: #123A5F;
+  border-radius: 14px;
+  padding: 40px 36px;
+  margin: 16px 0;
+  max-width: 640px;
+}
+.small-title {
+  font: 700 16px/1.3 var(--mrt-font-heading);
+  color: #123A5F;
+  margin: 0 0 6px;
+}
+.small-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  color: #444;
+}
+.small-bullets li {
+  padding: 3px 0 3px 16px;
+  position: relative;
+}
+.small-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  background: #123A5F;
+  border-radius: 50%;
+}
+.small-card {
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(18,58,95,0.1);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 12px 0;
+  max-width: 320px;
+}
+
 </style>
 </head>
 <body>
@@ -483,6 +535,31 @@ ul.vivid.square li::before { border-radius: 2px; }
     <div class="deck-card">
       <div class="deck-title">Turbo GPS</div>
       <div class="deck-subtitle">Real-time location with long-range telemetry</div>
+    </div>
+
+    
+    <p style="margin-top:32px"><strong>High contrast — large title</strong></p>
+    <div class="hc-card">
+      <div class="hc-title">Field Marshall 4000</div>
+      <div class="hc-sub">VHF tracking for falconry and sporting dogs</div>
+    </div>
+
+    <p style="margin-top:32px"><strong>Small title + small bullets</strong></p>
+    <div class="small-card">
+      <div class="small-title">Turbo GPS</div>
+      <ul class="small-bullets">
+        <li>Real-time location</li>
+        <li>Long-range telemetry</li>
+        <li>Compact form factor</li>
+      </ul>
+    </div>
+    <div class="small-card">
+      <div class="small-title">PocketLink</div>
+      <ul class="small-bullets">
+        <li>Handheld receiver</li>
+        <li>Pairs with VHF transmitters</li>
+        <li>Field-ready</li>
+      </ul>
     </div>
 
     <p style="margin-top:24px"><strong>Related blocks</strong></p>
