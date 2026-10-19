@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Black.woff2') format('woff2'),
+        url('MatterXH-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-BlackItalic.woff2') format('woff2'),
+        url('MatterXH-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Bold.woff2') format('woff2'),
+        url('MatterXH-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-BoldItalic.woff2') format('woff2'),
+        url('MatterXH-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Heavy.woff2') format('woff2'),
+        url('MatterXH-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Light.woff2') format('woff2'),
+        url('MatterXH-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-LightItalic.woff2') format('woff2'),
+        url('MatterXH-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Medium.woff2') format('woff2'),
+        url('MatterXH-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-MediumItalic.woff2') format('woff2'),
+        url('MatterXH-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Regular.woff2') format('woff2'),
+        url('MatterXH-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-RegularItalic.woff2') format('woff2'),
+        url('MatterXH-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-SemiBold.woff2') format('woff2'),
+        url('MatterXH-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-SemiBoldItalic.woff2') format('woff2'),
+        url('MatterXH-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-Thin.woff2') format('woff2'),
+        url('MatterXH-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Matter XH-TRIAL';
+    src: url('MatterXH-ThinItalic.woff2') format('woff2'),
+        url('MatterXH-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
