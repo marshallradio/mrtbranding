@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Web UI · Marshall Radio Telemetry Identity</title>
+<meta name="description" content="Design guidelines for web applications: tables, paragraphs, buttons, forms, Gantt charts, product diagrams, confirmation and failure prompts, and form validation messages.">
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
+<script src="../../assets/js/nav.js?v=0970a167" defer></script>
+<style>
+.specimen { background: var(--mrt-color-light-grey); border-radius: 8px; padding: 32px; margin: 24px 0; }
+.dark-specimen { background: var(--mrt-color-black); color: var(--mrt-color-light-grey); border-radius: 8px; padding: 32px; margin: 24px 0; }
+.btn { display: inline-block; font: 700 16px/1.3 var(--mrt-font-body); padding: 12px 24px; border-radius: 4px; text-decoration: none; border: none; cursor: pointer; }
+.btn-primary { background: var(--mrt-color-blue); color: white; }
+.btn-secondary { background: transparent; color: var(--mrt-color-blue); border: 1px solid var(--mrt-color-blue); }
+.btn-danger { background: var(--mrt-color-red); color: white; }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-weight: 700; margin-bottom: 6px; }
+.form-group input, .form-group select, .form-group textarea { width: 100%; max-width: 400px; padding: 10px 12px; border: 1px solid var(--mrt-color-black-20); border-radius: 4px; font: 400 16px/1.5 var(--mrt-font-body); }
+.form-group input:focus { outline: 2px solid var(--mrt-color-blue); border-color: var(--mrt-color-blue); }
+.error { color: var(--mrt-color-red); font-size: 13px; margin-top: 4px; }
+.success { color: #1B6B3A; font-size: 13px; margin-top: 4px; }
+table.ui { width: 100%; border-collapse: collapse; font-size: 15px; }
+table.ui th { text-align: left; font-weight: 700; padding: 12px 16px; background: var(--mrt-color-blue); color: white; }
+table.ui td { padding: 12px 16px; border-bottom: 1px solid var(--mrt-color-black-20); }
+table.ui tr:hover { background: var(--mrt-color-light-grey); }
+.prompt { border-left: 4px solid var(--mrt-color-blue); padding: 16px 20px; background: white; border-radius: 0 8px 8px 0; margin: 16px 0; }
+.prompt.failure { border-left-color: var(--mrt-color-red); }
+.gantt { font-size: 13px; }
+.gantt-bar { background: var(--mrt-color-blue); height: 20px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="168" height="30"><span>Brand Guidelines</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Home</a>
+    <a href="../../brand-components/typography/">Typography</a>
+    <a href="../web-ui/" class="on">Web UI</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+<article>
+  <h1>Web application UI</h1>
+  <p class="lead">Guidelines for tables, paragraphs, buttons, forms, diagrams, and system messages. Use Matter Regular (400) and Bold (700), the type scale, and brand colors.</p>
+
+  <h2>Paragraphs</h2>
+  <div class="specimen">
+    <p style="font:400 16px/1.6 var(--mrt-font-body); margin:0 0 16px">Body text uses Matter Regular at 16px with 1.6 line-height. Keep line length under ~75 characters for readability. Use sentence case.</p>
+    <p style="font:400 16px/1.6 var(--mrt-font-body); margin:0">Second paragraph. Avoid justified text. Generous spacing between paragraphs (24px).</p>
+  </div>
+
+  <h2>Buttons</h2>
+  <div class="specimen">
+    <button class="btn btn-primary">Primary action</button>
+    <button class="btn btn-secondary" style="margin-left:12px">Secondary</button>
+    <button class="btn btn-danger" style="margin-left:12px">Destructive</button>
+    <p class="note" style="margin-top:16px">Primary: M Blue fill, white Bold label. Secondary: outline. Destructive: M Red. Minimum height 44px for touch. Use sentence case.</p>
+  </div>
+
+  <h2>Forms</h2>
+  <div class="specimen">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" placeholder="Full name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" value="invalid" style="border-color:var(--mrt-color-red)">
+      <div class="error">Enter a valid email address.</div>
+    </div>
+    <div class="form-group">
+      <label for="product">Product line</label>
+      <select id="product"><option>Falconry</option><option>Sporting Dogs</option></select>
+    </div>
+    <button class="btn btn-primary">Submit</button>
+    <p class="note" style="margin-top:16px">Labels Bold 700. Inputs 16px. Error text M Red, 13px, below the field. Focus ring M Blue.</p>
+  </div>
+
+  <h2>Form validation messages</h2>
+  <div class="specimen">
+    <div class="error">Required field.</div>
+    <div class="error">Must be at least 8 characters.</div>
+    <div class="success">Saved successfully.</div>
+    <p class="note">Keep messages short, specific, and in sentence case. Place directly under the field. Use M Red for errors.</p>
+  </div>
+
+  <h2>Tables</h2>
+  <div class="specimen">
+    <table class="ui">
+      <thead><tr><th>Product</th><th>Frequency</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Turbo GPS Transmitter</td><td>UHF</td><td>Active</td></tr>
+        <tr><td>Field Marshall 4000</td><td>VHF</td><td>Active</td></tr>
+        <tr><td>PocketLink</td><td>—</td><td>Discontinued</td></tr>
+      </tbody>
+    </table>
+    <p class="note" style="margin-top:16px">Header: M Blue background, white Bold text. Body: 15–16px Regular. Subtle hover. Align numbers right when needed.</p>
+  </div>
+
+  <h2>Confirmation prompts</h2>
+  <div class="specimen">
+    <div class="prompt">
+      <strong>Confirm deletion</strong>
+      <p style="margin:8px 0 16px">This will permanently remove the transmitter record. This action cannot be undone.</p>
+      <button class="btn btn-danger">Delete</button>
+      <button class="btn btn-secondary" style="margin-left:8px">Cancel</button>
+    </div>
+  </div>
+
+  <h2>Failure prompts</h2>
+  <div class="specimen">
+    <div class="prompt failure">
+      <strong>Unable to save</strong>
+      <p style="margin:8px 0 0">The server could not be reached. Check your connection and try again.</p>
+    </div>
+  </div>
+
+  <h2>Gantt charts</h2>
+  <div class="specimen gantt">
+    <div style="display:grid;grid-template-columns:140px 1fr;gap:8px;align-items:center;margin-bottom:8px"><span>Research</span><div class="gantt-bar" style="width:30%"></div></div>
+    <div style="display:grid;grid-template-columns:140px 1fr;gap:8px;align-items:center;margin-bottom:8px"><span>Prototyping</span><div class="gantt-bar" style="width:50%;margin-left:15%"></div></div>
+    <div style="display:grid;grid-template-columns:140px 1fr;gap:8px;align-items:center"><span>Testing</span><div class="gantt-bar" style="width:25%;margin-left:60%"></div></div>
+    <p class="note" style="margin-top:16px">Use M Blue bars. Labels in Regular 13–14px. Keep the chart simple; avoid decorative elements.</p>
+  </div>
+
+  <h2>Product diagrams and illustrations</h2>
+  <div class="specimen">
+    <p>Use clean line drawings or simple isometric views. Prefer real product photography when available. Diagrams should use M Blue for primary elements, Black for outlines, and Light Grey for backgrounds. Avoid gradients, drop shadows, and decorative effects. Keep labels in Matter Bold or Regular at 13–16px.</p>
+    <p>Illustrations of the arcs device may appear large and faint as a background element, never as a competing logo.</p>
+  </div>
+
+  <h2>Summary rules</h2>
+  <ul>
+    <li>Matter Regular 400 for body and inputs; Bold 700 for labels, buttons, and headings.</li>
+    <li>Follow the type scale. Optional tighter tracking on large headings only.</li>
+    <li>M Blue for primary actions and headers; M Red only for destructive or error states.</li>
+    <li>On black backgrounds use Light Grey text.</li>
+    <li>Keep messages short, specific, and in sentence case.</li>
+    <li>High contrast, generous spacing, no decorative effects.</li>
+  </ul>
+</article>
+</main></div>
+
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Web UI guidelines</p></div></footer>
+</body>
+</html>
