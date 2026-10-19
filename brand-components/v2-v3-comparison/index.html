@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V2 / V3 Comparison · Marshall Radio Telemetry</title>
+<meta name="description" content="Side-by-side comparison of current V2 direction and proposed V3 color and arcs treatment.">
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
+<script src="../../assets/js/nav.js?v=0970a167" defer></script>
+<style>
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin: 32px 0;
+}
+@media (max-width: 800px) {
+  .comparison { grid-template-columns: 1fr; }
+}
+.panel {
+  border-radius: 12px;
+  padding: 28px;
+  min-height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+.panel h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.panel .label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.v2 {
+  background: #F1F1F1;
+  border: 1px solid #C6C7BB;
+}
+.v3 {
+  background: #F7F7F5;
+  border: 1px solid #E4E7EC;
+}
+.swatch-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+  flex-wrap: wrap;
+}
+.swatch {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+}
+.arc-demo {
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 280px;
+  height: 180px;
+  opacity: 0.12;
+  pointer-events: none;
+}
+.arc-demo svg {
+  width: 100%;
+  height: 100%;
+}
+.btn-demo {
+  display: inline-block;
+  font: 700 14px/1.4 var(--mrt-font-body);
+  padding: 8px 16px;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+.note {
+  font-size: 13px;
+  color: #555;
+  margin-top: 16px;
+}
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="168" height="30"><span>Brand Guidelines</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Home</a>
+    <a href="../../brand-components/typography/">Typography</a>
+    <a href="../web-ui/">Web UI</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+<article>
+  <h1>V2 / V3 comparison</h1>
+  <p class="lead">Current V2 direction versus a proposed V3 with refined colors and a cleaner arcs treatment. The arcs remain the single graphic identity; everything else is tightened.</p>
+
+  <div class="comparison">
+    <div class="panel v2">
+      <div class="label">V2 · Current</div>
+      <h3>Inherited palette</h3>
+      <div class="swatch-row">
+        <div class="swatch" style="background:#1B3A6A" title="M Blue"></div>
+        <div class="swatch" style="background:#8A2F1D" title="M Red"></div>
+        <div class="swatch" style="background:#C6C7BB" title="Khaki"></div>
+        <div class="swatch" style="background:#F1F1F1" title="Light Grey"></div>
+        <div class="swatch" style="background:#171D1A" title="Black"></div>
+      </div>
+      <div class="btn-demo" style="background:#1B3A6A;color:white;border:none">Primary</div>
+      <div class="btn-demo" style="background:transparent;color:#1B3A6A;border:1.5px solid #1B3A6A;margin-left:8px">Secondary</div>
+      <p class="note">Heavy navy and dusty red. Arcs appear as soft grey photo overlays in footers. Feels closer to the previous decade’s site.</p>
+      <div class="arc-demo" style="opacity:0.18">
+        <svg viewBox="0 0 200 120" fill="none"><path d="M10 100 C60 20, 140 20, 190 100" stroke="#171D1A" stroke-width="8"/></svg>
+      </div>
+    </div>
+
+    <div class="panel v3">
+      <div class="label">V3 · Proposed</div>
+      <h3>Refined, lighter system</h3>
+      <div class="swatch-row">
+        <div class="swatch" style="background:#123A5F" title="Refined Blue"></div>
+        <div class="swatch" style="background:#E04A2F" title="Signal Red"></div>
+        <div class="swatch" style="background:#E8E6E1" title="Stone"></div>
+        <div class="swatch" style="background:#F7F7F5" title="Warm White"></div>
+        <div class="swatch" style="background:#0F1412" title="Near Black"></div>
+      </div>
+      <div class="btn-demo" style="background:transparent;color:#123A5F;border:1.5px solid #123A5F">Primary</div>
+      <div class="btn-demo" style="background:transparent;color:#0F1412;border:1.5px solid #C6C7BB;margin-left:8px">Secondary</div>
+      <p class="note">Deeper, cleaner blue and a more precise accent. Arcs as a thin vector stroke at very low opacity. Quieter luxury, higher contrast.</p>
+      <div class="arc-demo" style="opacity:0.08">
+        <svg viewBox="0 0 200 120" fill="none"><path d="M10 100 C60 20, 140 20, 190 100" stroke="#123A5F" stroke-width="4"/></svg>
+      </div>
+    </div>
+  </div>
+
+  <h2>Arcs treatment</h2>
+  <div class="comparison">
+    <div class="panel v2">
+      <div class="label">V2</div>
+      <h3>Soft overlay</h3>
+      <p>Large grey or white arcs as photographic or heavily transparent backgrounds. Often taken directly from older site assets. Can feel soft and dated at small sizes.</p>
+    </div>
+    <div class="panel v3">
+      <div class="label">V3</div>
+      <h3>Precise gesture</h3>
+      <p>Single thin vector arc, large and cropped. Very low opacity (4–8%). Blue or near-black on light; white on dark. Never filled. Same identity, sharper execution.</p>
+    </div>
+  </div>
+
+  <h2>Geometric pattern notes</h2>
+  <ul>
+    <li><strong>Quiet luxury</strong> — tone-on-tone arcs work better than high-contrast patterns for this brand.</li>
+    <li><strong>Fluid geometry</strong> — keep the arc as a single sweeping curve; avoid repeating it as a pattern.</li>
+    <li><strong>Micro-scale</strong> — a faint arcs device can live in large backgrounds or section dividers without competing with photography.</li>
+    <li>Avoid checkerboards, dense geometric tiles, or maximalist repeats — they fight the single-arc rule.</li>
+  </ul>
+
+  <p class="note">This page is a working comparison only. Nothing here replaces the current guidelines until the direction is approved.</p>
+</article>
+</main></div>
+
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · V2 / V3 comparison</p></div></footer>
+</body>
+</html>
