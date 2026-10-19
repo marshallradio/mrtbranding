@@ -291,6 +291,28 @@ ul.vivid.square li::before { border-radius: 2px; }
 }
 .arrow { color: #123A5F; font-size: 20px; opacity: 0.5; }
 
+
+.deck-title {
+  font: 700 42px/1.15 var(--mrt-font-heading);
+  letter-spacing: -0.02em;
+  color: #123A5F;
+  margin: 0 0 8px;
+}
+.deck-subtitle {
+  font: 400 20px/1.4 var(--mrt-font-body);
+  color: #555;
+  margin: 0;
+}
+.deck-card {
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 14px;
+  padding: 40px 36px;
+  margin: 16px 0;
+  max-width: 640px;
+}
+
 </style>
 </head>
 <body>
@@ -451,6 +473,17 @@ ul.vivid.square li::before { border-radius: 2px; }
       <li>Turbo GPS — real-time location</li>
       <li>PocketLink — receiver</li>
     </ul>
+
+    
+    <p style="margin-top:32px"><strong>Deck title + subtitle</strong></p>
+    <div class="deck-card">
+      <div class="deck-title">Field Marshall 4000</div>
+      <div class="deck-subtitle">VHF tracking system for falconry and sporting dogs</div>
+    </div>
+    <div class="deck-card">
+      <div class="deck-title">Turbo GPS</div>
+      <div class="deck-subtitle">Real-time location with long-range telemetry</div>
+    </div>
 
     <p style="margin-top:24px"><strong>Related blocks</strong></p>
     <div class="blocks">
