@@ -10,55 +10,107 @@
 <script src="../../assets/js/nav.js?v=0970a167" defer></script>
 <style>
 body {
-  background: linear-gradient(160deg, #F7F7F5 0%, #EEF2F6 40%, #F4F0ED 100%);
+  background: linear-gradient(160deg, #F7F7F5 0%, #E8EEF5 35%, #F5F0EC 70%, #EEF2F6 100%);
   min-height: 100vh;
 }
 .glass {
-  background: rgba(255,255,255,0.55);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255,255,255,0.5);
-  border-radius: 14px;
-  box-shadow: 0 8px 32px rgba(18,58,95,0.07), inset 0 1px 0 rgba(255,255,255,0.7);
+  position: relative;
+  background: linear-gradient(135deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0.35) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,0.6);
+  border-radius: 16px;
+  box-shadow:
+    0 12px 40px rgba(18,58,95,0.1),
+    0 0 30px rgba(18,58,95,0.06),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(18,58,95,0.05);
+  overflow: hidden;
+}
+.glass::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: conic-gradient(
+    from 180deg at 70% 30%,
+    rgba(18,58,95,0.18),
+    rgba(224,74,47,0.12),
+    rgba(100,180,255,0.15),
+    rgba(255,255,255,0.25),
+    rgba(18,58,95,0.1)
+  );
+  filter: blur(28px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: prismShift 8s ease-in-out infinite alternate;
+}
+.glass::after {
+  content: "";
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform: skewX(-20deg);
+  animation: shine 6s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes prismShift {
+  0% { transform: rotate(0deg) scale(1); opacity: 0.45; }
+  100% { transform: rotate(12deg) scale(1.05); opacity: 0.65; }
+}
+@keyframes shine {
+  0% { left: -100%; }
+  40% { left: 140%; }
+  100% { left: 140%; }
 }
 .panel-header {
+  position: relative;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid rgba(18,58,95,0.08);
+  border-bottom: 1px solid rgba(18,58,95,0.1);
   cursor: move;
   user-select: none;
 }
-.panel-header .title { font-weight: 700; font-size: 14px; color: #123A5F; }
+.panel-header .title {
+  font-weight: 700;
+  font-size: 14px;
+  color: #123A5F;
+  text-shadow: 0 0 12px rgba(18,58,95,0.2);
+}
 .controls { display: flex; gap: 6px; }
 .ctrl {
   width: 22px; height: 22px;
   border-radius: 6px;
-  border: 1px solid rgba(18,58,95,0.15);
-  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(18,58,95,0.2);
+  background: rgba(255,255,255,0.45);
   font-size: 12px;
   line-height: 1;
   cursor: pointer;
   color: #123A5F;
+  box-shadow: 0 0 8px rgba(18,58,95,0.08);
 }
-.ctrl:hover { background: rgba(255,255,255,0.8); }
-.panel-body { padding: 16px; }
+.ctrl:hover { background: rgba(255,255,255,0.75); }
+.panel-body { position: relative; z-index: 1; padding: 16px; }
 .btn {
   display: inline-block;
   font: 700 14px/1.4 var(--mrt-font-body);
   padding: 8px 16px;
   border-radius: 8px;
-  background: rgba(255,255,255,0.5);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(18,58,95,0.2);
+  background: rgba(255,255,255,0.45);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(18,58,95,0.25);
   color: #123A5F;
   cursor: pointer;
-  box-shadow: 0 0 12px rgba(18,58,95,0.06);
+  box-shadow: 0 0 16px rgba(18,58,95,0.1);
 }
 .btn-danger {
-  border-color: rgba(224,74,47,0.35);
+  border-color: rgba(224,74,47,0.4);
   color: #E04A2F;
+  box-shadow: 0 0 16px rgba(224,74,47,0.12);
 }
 table.ui {
   width: 100%;
@@ -70,16 +122,14 @@ table.ui th {
   font-weight: 700;
   padding: 10px 12px;
   color: #123A5F;
-  border-bottom: 1px solid rgba(18,58,95,0.1);
+  border-bottom: 1px solid rgba(18,58,95,0.12);
 }
 table.ui td {
   padding: 10px 12px;
-  border-bottom: 1px solid rgba(18,58,95,0.06);
+  border-bottom: 1px solid rgba(18,58,95,0.07);
 }
-table.ui tr:hover { background: rgba(18,58,95,0.03); }
-.gantt {
-  font-size: 13px;
-}
+table.ui tr:hover { background: rgba(18,58,95,0.04); }
+.gantt { font-size: 13px; }
 .gantt-header {
   display: grid;
   grid-template-columns: 120px repeat(8, 1fr);
@@ -87,7 +137,7 @@ table.ui tr:hover { background: rgba(18,58,95,0.03); }
   margin-bottom: 8px;
   font-weight: 700;
   color: #123A5F;
-  opacity: 0.7;
+  opacity: 0.75;
 }
 .gantt-row {
   display: grid;
@@ -98,21 +148,22 @@ table.ui tr:hover { background: rgba(18,58,95,0.03); }
 }
 .gantt-bar {
   height: 14px;
-  background: linear-gradient(90deg, rgba(18,58,95,0.15), rgba(18,58,95,0.25));
-  border: 1px solid rgba(18,58,95,0.25);
+  background: linear-gradient(90deg, rgba(18,58,95,0.2), rgba(100,180,255,0.25));
+  border: 1px solid rgba(18,58,95,0.3);
   border-radius: 6px;
   position: relative;
-  box-shadow: 0 0 12px rgba(18,58,95,0.08);
+  box-shadow: 0 0 16px rgba(18,58,95,0.15);
 }
 .notice {
   background: rgba(253,242,240,0.55);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(224,74,47,0.12);
+  border: 1px solid rgba(224,74,47,0.18);
   color: #5C2A22;
   padding: 12px 16px;
   border-radius: 8px;
   font-size: 13px;
   margin-top: 12px;
+  box-shadow: 0 0 20px rgba(224,74,47,0.1);
 }
 .workspace {
   position: relative;
@@ -139,7 +190,7 @@ table.ui tr:hover { background: rgba(18,58,95,0.03); }
 <main><div class="wrap">
 <article>
   <h1>V3 interface</h1>
-  <p class="lead">Airy glass surfaces, light tables, draggable panels, and a soft Gantt. Drag the panels by their headers.</p>
+  <p class="lead">Airy glass surfaces with stronger prism and holographic light. Drag the panels by their headers.</p>
 
   <div class="workspace">
     <div class="draggable glass" style="top:20px; left:0" data-draggable>
