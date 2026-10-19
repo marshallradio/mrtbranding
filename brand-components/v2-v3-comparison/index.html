@@ -4,84 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>V2 / V3 Comparison · Marshall Radio Telemetry</title>
-<meta name="description" content="Side-by-side comparison of current V2 direction and proposed V3 color and arcs treatment.">
+<meta name="description" content="Side-by-side comparison of current V2 and proposed V3: colors, elements, arcs, and typography.">
 <link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
 <link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
 <script src="../../assets/js/nav.js?v=0970a167" defer></script>
 <style>
-.comparison {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 32px;
-  margin: 32px 0;
-}
-@media (max-width: 800px) {
-  .comparison { grid-template-columns: 1fr; }
-}
-.panel {
-  border-radius: 12px;
-  padding: 28px;
-  min-height: 280px;
-  position: relative;
-  overflow: hidden;
-}
-.panel h3 {
-  margin: 0 0 8px;
-  font-size: 18px;
-}
-.panel .label {
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  opacity: 0.7;
-}
-.v2 {
-  background: #F1F1F1;
-  border: 1px solid #C6C7BB;
-}
-.v3 {
-  background: #F7F7F5;
-  border: 1px solid #E4E7EC;
-}
-.swatch-row {
-  display: flex;
-  gap: 8px;
-  margin: 16px 0;
-  flex-wrap: wrap;
-}
-.swatch {
-  width: 48px;
-  height: 48px;
-  border-radius: 8px;
-  border: 1px solid rgba(0,0,0,0.08);
-}
-.arc-demo {
-  position: absolute;
-  right: -40px;
-  bottom: -60px;
-  width: 280px;
-  height: 180px;
-  opacity: 0.12;
-  pointer-events: none;
-}
-.arc-demo svg {
-  width: 100%;
-  height: 100%;
-}
-.btn-demo {
-  display: inline-block;
-  font: 700 14px/1.4 var(--mrt-font-body);
-  padding: 8px 16px;
-  border-radius: 6px;
-  margin-top: 12px;
-}
-.note {
-  font-size: 13px;
-  color: #555;
-  margin-top: 16px;
-}
+.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 32px 0; }
+@media (max-width: 800px) { .comparison { grid-template-columns: 1fr; } }
+.panel { border-radius: 12px; padding: 28px; position: relative; overflow: hidden; }
+.panel h3 { margin: 0 0 8px; font-size: 18px; }
+.panel .label { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; opacity: 0.7; }
+.v2 { background: #F1F1F1; border: 1px solid #C6C7BB; }
+.v3 { background: #F7F7F5; border: 1px solid #E4E7EC; }
+.swatch-row { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
+.swatch { width: 48px; height: 48px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+.btn-demo { display: inline-block; font: 700 14px/1.4 var(--mrt-font-body); padding: 8px 16px; border-radius: 6px; margin: 6px 6px 6px 0; }
+.note { font-size: 13px; color: #555; margin-top: 16px; }
+.pair { margin: 12px 0; font-size: 14px; }
+.pair span { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
+.type-sample { margin: 12px 0; }
+.arc-rule { font-size: 14px; margin: 8px 0; }
 </style>
 </head>
 <body>
@@ -98,69 +40,113 @@
 <main><div class="wrap">
 <article>
   <h1>V2 / V3 comparison</h1>
-  <p class="lead">Current V2 direction versus a proposed V3 with refined colors and a cleaner arcs treatment. The arcs remain the single graphic identity; everything else is tightened.</p>
+  <p class="lead">Full side-by-side of the current V2 system and a proposed V3 direction. Arcs stay the single identity; colors, elements, and type are refined.</p>
 
+  <h2>Color palette</h2>
   <div class="comparison">
     <div class="panel v2">
       <div class="label">V2 · Current</div>
-      <h3>Inherited palette</h3>
       <div class="swatch-row">
-        <div class="swatch" style="background:#1B3A6A" title="M Blue"></div>
-        <div class="swatch" style="background:#8A2F1D" title="M Red"></div>
-        <div class="swatch" style="background:#C6C7BB" title="Khaki"></div>
-        <div class="swatch" style="background:#F1F1F1" title="Light Grey"></div>
-        <div class="swatch" style="background:#171D1A" title="Black"></div>
+        <div class="swatch" style="background:#1B3A6A" title="M Blue #1B3A6A"></div>
+        <div class="swatch" style="background:#8A2F1D" title="M Red #8A2F1D"></div>
+        <div class="swatch" style="background:#C6C7BB" title="Khaki #C6C7BB"></div>
+        <div class="swatch" style="background:#F1F1F1" title="Light Grey #F1F1F1"></div>
+        <div class="swatch" style="background:#171D1A" title="Black #171D1A"></div>
       </div>
-      <div class="btn-demo" style="background:#1B3A6A;color:white;border:none">Primary</div>
-      <div class="btn-demo" style="background:transparent;color:#1B3A6A;border:1.5px solid #1B3A6A;margin-left:8px">Secondary</div>
-      <p class="note">Heavy navy and dusty red. Arcs appear as soft grey photo overlays in footers. Feels closer to the previous decade’s site.</p>
-      <div class="arc-demo" style="opacity:0.18">
-        <svg viewBox="0 0 200 120" fill="none"><path d="M10 100 C60 20, 140 20, 190 100" stroke="#171D1A" stroke-width="8"/></svg>
-      </div>
+      <p class="note">Deep navy and brick red. Khaki as a secondary surface. Heavier overall.</p>
     </div>
-
     <div class="panel v3">
       <div class="label">V3 · Proposed</div>
-      <h3>Refined, lighter system</h3>
       <div class="swatch-row">
-        <div class="swatch" style="background:#123A5F" title="Refined Blue"></div>
-        <div class="swatch" style="background:#E04A2F" title="Signal Red"></div>
-        <div class="swatch" style="background:#E8E6E1" title="Stone"></div>
-        <div class="swatch" style="background:#F7F7F5" title="Warm White"></div>
-        <div class="swatch" style="background:#0F1412" title="Near Black"></div>
+        <div class="swatch" style="background:#123A5F" title="Refined Blue #123A5F"></div>
+        <div class="swatch" style="background:#E04A2F" title="Signal Red #E04A2F"></div>
+        <div class="swatch" style="background:#E8E6E1" title="Stone #E8E6E1"></div>
+        <div class="swatch" style="background:#F7F7F5" title="Warm White #F7F7F5"></div>
+        <div class="swatch" style="background:#0F1412" title="Near Black #0F1412"></div>
       </div>
-      <div class="btn-demo" style="background:transparent;color:#123A5F;border:1.5px solid #123A5F">Primary</div>
-      <div class="btn-demo" style="background:transparent;color:#0F1412;border:1.5px solid #C6C7BB;margin-left:8px">Secondary</div>
-      <p class="note">Deeper, cleaner blue and a more precise accent. Arcs as a thin vector stroke at very low opacity. Quieter luxury, higher contrast.</p>
-      <div class="arc-demo" style="opacity:0.08">
-        <svg viewBox="0 0 200 120" fill="none"><path d="M10 100 C60 20, 140 20, 190 100" stroke="#123A5F" stroke-width="4"/></svg>
-      </div>
+      <p class="note">Cleaner blue, brighter accent, lighter stone and warm white. Higher contrast, quieter luxury.</p>
     </div>
   </div>
 
-  <h2>Arcs treatment</h2>
+  <h2>Color profiles & pairings</h2>
   <div class="comparison">
     <div class="panel v2">
       <div class="label">V2</div>
-      <h3>Soft overlay</h3>
-      <p>Large grey or white arcs as photographic or heavily transparent backgrounds. Often taken directly from older site assets. Can feel soft and dated at small sizes.</p>
+      <div class="pair"><span style="background:#1B3A6A"></span> Blue text on Khaki</div>
+      <div class="pair"><span style="background:#F1F1F1"></span> Light Grey on Blue</div>
+      <div class="pair"><span style="background:#FFFFFF"></span> White on Black</div>
+      <div class="pair"><span style="background:#8A2F1D"></span> Red used sparingly for accents</div>
+      <p class="note">Avoid Blue on Red or Blue on Black for text. Contrast target ≥ 4.5:1.</p>
     </div>
     <div class="panel v3">
       <div class="label">V3</div>
-      <h3>Precise gesture</h3>
-      <p>Single thin vector arc, large and cropped. Very low opacity (4–8%). Blue or near-black on light; white on dark. Never filled. Same identity, sharper execution.</p>
+      <div class="pair"><span style="background:#123A5F"></span> Blue text on Warm White or Stone</div>
+      <div class="pair"><span style="background:#F7F7F5"></span> Light text on Refined Blue</div>
+      <div class="pair"><span style="background:#FFFFFF"></span> White on Near Black</div>
+      <div class="pair"><span style="background:#E04A2F"></span> Signal Red only for emphasis or errors</div>
+      <p class="note">Same contrast rules. Prefer outline treatments over solid fills for interactive elements.</p>
     </div>
   </div>
 
-  <h2>Geometric pattern notes</h2>
-  <ul>
-    <li><strong>Quiet luxury</strong> — tone-on-tone arcs work better than high-contrast patterns for this brand.</li>
-    <li><strong>Fluid geometry</strong> — keep the arc as a single sweeping curve; avoid repeating it as a pattern.</li>
-    <li><strong>Micro-scale</strong> — a faint arcs device can live in large backgrounds or section dividers without competing with photography.</li>
-    <li>Avoid checkerboards, dense geometric tiles, or maximalist repeats — they fight the single-arc rule.</li>
-  </ul>
+  <h2>Elements</h2>
+  <div class="comparison">
+    <div class="panel v2">
+      <div class="label">V2</div>
+      <div class="btn-demo" style="background:#1B3A6A;color:white;border:none">Primary (filled)</div>
+      <div class="btn-demo" style="background:transparent;color:#1B3A6A;border:1.5px solid #1B3A6A">Secondary</div>
+      <div class="btn-demo" style="background:#8A2F1D;color:white;border:none">Destructive</div>
+      <p class="note">Solid fills for primary actions. Tables with blue header bars. Heavier visual weight.</p>
+    </div>
+    <div class="panel v3">
+      <div class="label">V3</div>
+      <div class="btn-demo" style="background:transparent;color:#123A5F;border:1.5px solid #123A5F">Primary (outline)</div>
+      <div class="btn-demo" style="background:transparent;color:#0F1412;border:1.5px solid #C6C7BB">Secondary</div>
+      <div class="btn-demo" style="background:transparent;color:#E04A2F;border:1.5px solid #E04A2F">Destructive</div>
+      <p class="note">Outline-first buttons. Open table headers. Light borders and soft focus rings.</p>
+    </div>
+  </div>
 
-  <p class="note">This page is a working comparison only. Nothing here replaces the current guidelines until the direction is approved.</p>
+  <h2>How to use the arcs</h2>
+  <div class="comparison">
+    <div class="panel v2">
+      <div class="label">V2</div>
+      <div class="arc-rule">• Large and faint (white or light grey)</div>
+      <div class="arc-rule">• One per layout only</div>
+      <div class="arc-rule">• Cropped, running off the edge</div>
+      <div class="arc-rule">• Never small, repeated, or outlined</div>
+      <div class="arc-rule">• Often a soft photo overlay</div>
+      <p class="note">Works as atmosphere but can feel soft and inherited from older assets.</p>
+    </div>
+    <div class="panel v3">
+      <div class="label">V3</div>
+      <div class="arc-rule">• Single thin vector stroke</div>
+      <div class="arc-rule">• Very low opacity (4–8%)</div>
+      <div class="arc-rule">• Blue or near-black on light; white on dark</div>
+      <div class="arc-rule">• Large, cropped, never filled</div>
+      <div class="arc-rule">• One per layout; never a pattern</div>
+      <p class="note">Same rules, sharper execution. Reads as intentional signal rather than leftover decoration.</p>
+    </div>
+  </div>
+
+  <h2>Typography</h2>
+  <div class="comparison">
+    <div class="panel v2">
+      <div class="label">V2</div>
+      <div class="type-sample" style="font:700 42px/1.15 var(--mrt-font-heading);color:#1B3A6A">Display 42px</div>
+      <div class="type-sample" style="font:700 22px/1.3 var(--mrt-font-heading);color:#1B3A6A">Heading 22px</div>
+      <div class="type-sample" style="font:400 16px/1.6 var(--mrt-font-body)">Body 16px / 1.6. Matter Regular.</div>
+      <p class="note">Matter Regular 400 and Bold 700 only. Optional tighter tracking on large sizes (−0.03em).</p>
+    </div>
+    <div class="panel v3">
+      <div class="label">V3</div>
+      <div class="type-sample" style="font:700 42px/1.15 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.02em">Display 42px</div>
+      <div class="type-sample" style="font:700 22px/1.3 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.015em">Heading 22px</div>
+      <div class="type-sample" style="font:400 16px/1.65 var(--mrt-font-body)">Body 16px / 1.65. Slightly more open.</div>
+      <p class="note">Same faces and weights. Slightly open line-height on body. Tracking kept tight only on display sizes.</p>
+    </div>
+  </div>
+
+  <p class="note">Working comparison only. Current guidelines remain in place until a direction is approved.</p>
 </article>
 </main></div>
 
