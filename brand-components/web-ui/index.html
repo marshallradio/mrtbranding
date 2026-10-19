@@ -97,11 +97,43 @@ table.ui tr:hover { background: #F8F9FA; }
   margin: 20px 0;
 }
 .prompt.failure { border-left-color: var(--mrt-color-red); }
+.gantt {
+  font-size: 13px;
+  background: white;
+  border: 1px solid var(--mrt-color-black-20);
+  border-radius: 8px;
+  padding: 16px;
+}
+.gantt-header {
+  display: grid;
+  grid-template-columns: 140px repeat(8, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: var(--mrt-color-black-60);
+}
+.gantt-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
 .gantt-bar {
-  background: transparent;
-  border: 1.5px solid var(--mrt-color-blue);
-  height: 18px;
+  height: 16px;
+  background: var(--mrt-color-blue-20);
+  border: 1px solid var(--mrt-color-blue);
   border-radius: 4px;
+  position: relative;
+}
+.gantt-bar span {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--mrt-color-blue);
 }
 .note {
   font-size: 13px;
@@ -200,10 +232,24 @@ table.ui tr:hover { background: #F8F9FA; }
 
   <h2>Gantt charts</h2>
   <div class="specimen">
-    <div style="display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:center;margin-bottom:10px"><span style="font-size:14px">Research</span><div class="gantt-bar" style="width:30%"></div></div>
-    <div style="display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:center;margin-bottom:10px"><span style="font-size:14px">Prototyping</span><div class="gantt-bar" style="width:50%;margin-left:15%"></div></div>
-    <div style="display:grid;grid-template-columns:140px 1fr;gap:10px;align-items:center"><span style="font-size:14px">Testing</span><div class="gantt-bar" style="width:25%;margin-left:60%"></div></div>
-    <p class="note">Outline bars only. No solid fills. Labels in Regular 14px.</p>
+    <div class="gantt">
+      <div class="gantt-header">
+        <span></span><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span>
+      </div>
+      <div class="gantt-row">
+        <span>Research</span>
+        <div style="position:relative"><div class="gantt-bar" style="width:35%"><span>Research</span></div></div>
+      </div>
+      <div class="gantt-row">
+        <span>Prototyping</span>
+        <div style="position:relative"><div class="gantt-bar" style="width:45%; margin-left:20%"><span>Prototype</span></div></div>
+      </div>
+      <div class="gantt-row">
+        <span>Testing</span>
+        <div style="position:relative"><div class="gantt-bar" style="width:30%; margin-left:55%"><span>Test</span></div></div>
+      </div>
+    </div>
+    <p class="note">Light fill (Blue 20%) with a thin M Blue border. Task name inside the bar when space allows. Week markers in the header. Keep labels short and Regular weight.</p>
   </div>
 
   <h2>Product diagrams and illustrations</h2>
