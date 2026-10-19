@@ -15,7 +15,7 @@
 .panel h3 { margin: 0 0 8px; font-size: 18px; }
 .panel .label { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; opacity: 0.7; }
 .v2 { background: #F1F1F1; border: 1px solid #C6C7BB; }
-.v3 { background: #F7F7F5; border: 1px solid #E4E7EC; }
+.v3 { background: #FAFAF8; border: 1px solid #E8E6E1; box-shadow: 0 1px 2px rgba(15,20,18,0.04); }
 .swatch-row { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
 .swatch { width: 48px; height: 48px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
 .btn-demo { display: inline-block; font: 700 14px/1.4 var(--mrt-font-body); padding: 8px 16px; border-radius: 6px; margin: 6px 6px 6px 0; }
@@ -24,6 +24,15 @@
 .pair span { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
 .type-sample { margin: 12px 0; }
 .arc-rule { font-size: 14px; margin: 8px 0; }
+.box-demo {
+  border-radius: 8px;
+  padding: 16px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.v2 .box-demo { background: white; border: 1px solid #C6C7BB; }
+.v3 .box-demo { background: white; border: 1px solid #E8E6E1; }
+.error-v3 { color: #E04A2F; font-size: 13px; }
 </style>
 </head>
 <body>
@@ -64,7 +73,7 @@
         <div class="swatch" style="background:#F7F7F5" title="Warm White #F7F7F5"></div>
         <div class="swatch" style="background:#0F1412" title="Near Black #0F1412"></div>
       </div>
-      <p class="note">Cleaner blue, brighter accent, lighter stone and warm white. Higher contrast, quieter luxury.</p>
+      <p class="note">Cleaner blue, brighter signal red, lighter stone and warm white. Higher contrast, quieter luxury.</p>
     </div>
   </div>
 
@@ -75,16 +84,16 @@
       <div class="pair"><span style="background:#1B3A6A"></span> Blue text on Khaki</div>
       <div class="pair"><span style="background:#F1F1F1"></span> Light Grey on Blue</div>
       <div class="pair"><span style="background:#FFFFFF"></span> White on Black</div>
-      <div class="pair"><span style="background:#8A2F1D"></span> Red used sparingly for accents</div>
+      <div class="pair"><span style="background:#8A2F1D"></span> Brick red for accents</div>
       <p class="note">Avoid Blue on Red or Blue on Black for text. Contrast target ≥ 4.5:1.</p>
     </div>
     <div class="panel v3">
       <div class="label">V3</div>
-      <div class="pair"><span style="background:#123A5F"></span> Blue text on Warm White or Stone</div>
+      <div class="pair"><span style="background:#123A5F"></span> Refined Blue on Warm White or Stone</div>
       <div class="pair"><span style="background:#F7F7F5"></span> Light text on Refined Blue</div>
       <div class="pair"><span style="background:#FFFFFF"></span> White on Near Black</div>
       <div class="pair"><span style="background:#E04A2F"></span> Signal Red only for emphasis or errors</div>
-      <p class="note">Same contrast rules. Prefer outline treatments over solid fills for interactive elements.</p>
+      <p class="note">Same contrast rules. Prefer outline treatments. Red is brighter and used more sparingly.</p>
     </div>
   </div>
 
@@ -95,14 +104,17 @@
       <div class="btn-demo" style="background:#1B3A6A;color:white;border:none">Primary (filled)</div>
       <div class="btn-demo" style="background:transparent;color:#1B3A6A;border:1.5px solid #1B3A6A">Secondary</div>
       <div class="btn-demo" style="background:#8A2F1D;color:white;border:none">Destructive</div>
+      <div class="box-demo">Panel with heavier border and fill tendency.</div>
       <p class="note">Solid fills for primary actions. Tables with blue header bars. Heavier visual weight.</p>
     </div>
     <div class="panel v3">
       <div class="label">V3</div>
       <div class="btn-demo" style="background:transparent;color:#123A5F;border:1.5px solid #123A5F">Primary (outline)</div>
-      <div class="btn-demo" style="background:transparent;color:#0F1412;border:1.5px solid #C6C7BB">Secondary</div>
+      <div class="btn-demo" style="background:transparent;color:#0F1412;border:1.5px solid #E8E6E1">Secondary</div>
       <div class="btn-demo" style="background:transparent;color:#E04A2F;border:1.5px solid #E04A2F">Destructive</div>
-      <p class="note">Outline-first buttons. Open table headers. Light borders and soft focus rings.</p>
+      <div class="box-demo">Light panel. Thin stone border. No heavy fill.</div>
+      <div class="error-v3" style="margin-top:8px">Error message in Signal Red.</div>
+      <p class="note">Outline-first buttons. Open table headers. Lighter boxes and borders. Brighter red used only for emphasis.</p>
     </div>
   </div>
 
@@ -121,7 +133,7 @@
       <div class="label">V3</div>
       <div class="arc-rule">• Single thin vector stroke</div>
       <div class="arc-rule">• Very low opacity (4–8%)</div>
-      <div class="arc-rule">• Blue or near-black on light; white on dark</div>
+      <div class="arc-rule">• Refined Blue or near-black on light; white on dark</div>
       <div class="arc-rule">• Large, cropped, never filled</div>
       <div class="arc-rule">• One per layout; never a pattern</div>
       <p class="note">Same rules, sharper execution. Reads as intentional signal rather than leftover decoration.</p>
