@@ -191,6 +191,7 @@ table.ui td { padding: 10px 12px; border-bottom: 1px solid rgba(18,58,95,0.07); 
 .big-title.cyan { color: #06B6D4; }
 .big-title.violet { color: #8B5CF6; }
 .big-title.red { color: #E04A2F; }
+.big-title.black { color: #0F1412; }
 ul.vivid {
   list-style: none;
   padding: 0;
@@ -214,6 +215,7 @@ ul.vivid.blue li::before { background: #3B82F6; box-shadow: 0 0 8px #3B82F6; }
 ul.vivid.cyan li::before { background: #06B6D4; box-shadow: 0 0 8px #06B6D4; }
 ul.vivid.violet li::before { background: #8B5CF6; box-shadow: 0 0 8px #8B5CF6; }
 ul.vivid.red li::before { background: #E04A2F; box-shadow: 0 0 8px #E04A2F; }
+ul.vivid.black li::before { background: #0F1412; }
 ul.vivid.square li::before { border-radius: 2px; }
 
 </style>
@@ -329,6 +331,10 @@ ul.vivid.square li::before { border-radius: 2px; }
         <div class="big-title red">Alert</div>
         <p style="margin:0; color:#555">Large display title in signal red</p>
       </div>
+      <div class="type-card">
+        <div class="big-title black">Precision</div>
+        <p style="margin:0; color:#555">Large display title in near black</p>
+      </div>
     </div>
 
     <div class="type-grid" style="margin-top:32px">
@@ -362,6 +368,14 @@ ul.vivid.square li::before { border-radius: 2px; }
           <li>Connection lost</li>
           <li>Low battery</li>
           <li>Out of range</li>
+        </ul>
+      </div>
+      <div class="type-card">
+        <strong>Black bullets</strong>
+        <ul class="vivid black">
+          <li>Field Marshall 4000</li>
+          <li>Turbo GPS Transmitter</li>
+          <li>PocketLink</li>
         </ul>
       </div>
     </div>
