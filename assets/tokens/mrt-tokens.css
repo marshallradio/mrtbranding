@@ -1,12 +1,26 @@
-/* Marshall Radio Telemetry design tokens. Colors and logo rules:;
+/* Marshall Radio Telemetry design tokens. Colors and logo rules.
+   V2: MatterXH fonts hosted for visual preview (confirm license for public use).
  */
-/* Typography:. Matter (Displaay Type Foundry), Matter Regular (400) and Matter Bold (700).
- License note: the font files are not hosted here (the Displaay license forbids public servers);
- @font-face uses locally installed Matter, otherwise the fallback stack applies. */
-@font-face{font-family:"Matter";font-weight:400;font-style:normal;font-display:swap;src:local("Matter Regular"),local("Matter-Regular"),local("Matter");}
-@font-face{font-family:"Matter";font-weight:700;font-style:normal;font-display:swap;src:local("Matter Bold"),local("Matter-Bold");}
+@font-face {
+  font-family: "Matter";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MatterXH-Regular.woff2") format("woff2"),
+       url("../fonts/MatterXH-Regular.woff") format("woff"),
+       local("Matter Regular"), local("Matter-Regular"), local("Matter");
+}
+@font-face {
+  font-family: "Matter";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/MatterXH-Bold.woff2") format("woff2"),
+       url("../fonts/MatterXH-Bold.woff") format("woff"),
+       local("Matter Bold"), local("Matter-Bold");
+}
 :root {
- /* Colors:. Tints follow the guide's 20% tint step system. */
+ /* Colors. Tints follow the guide's 20% tint step system. */
  --mrt-color-blue: #1B3A6A; /* M Blue · RGB 27, 58, 106 · CMYK 100, 85, 30, 20 */
  --mrt-color-red: #8A2F1D; /* M Red · RGB 138, 47, 29 · CMYK 30, 90, 100, 30 */
  --mrt-color-khaki: #C6C7BB; /* Khaki Grey · RGB 198, 199, 187 · CMYK 23, 16, 25, 0 · PMS 129U */
