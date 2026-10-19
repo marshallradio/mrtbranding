@@ -214,6 +214,83 @@ ul.vivid.red li::before { background: #E04A2F; box-shadow: 0 0 8px #E04A2F; }
 ul.vivid.black li::before { background: #0F1412; }
 ul.vivid.square li::before { border-radius: 2px; }
 
+
+.ui-showcase { margin: 48px 0; }
+.ui-showcase h2 { font: 700 28px/1.2 var(--mrt-font-heading); color: #123A5F; margin-bottom: 24px; }
+.ui-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 16px 0; align-items: center; }
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font: 700 13px/1.2 var(--mrt-font-body);
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(18,58,95,0.15);
+  color: #123A5F;
+  cursor: pointer;
+}
+.pill.on { background: #123A5F; color: white; border-color: #123A5F; }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid rgba(18,58,95,0.12); }
+.tab {
+  padding: 8px 16px;
+  font: 700 14px/1.3 var(--mrt-font-body);
+  color: #555;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+.tab.on { color: #123A5F; border-bottom-color: #123A5F; }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font: 700 11px/1.4 var(--mrt-font-body);
+  background: #3B82F6;
+  color: white;
+}
+.badge.red { background: #E04A2F; }
+.badge.black { background: #0F1412; }
+.icon-btn {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  border: 1px solid rgba(18,58,95,0.2);
+  background: rgba(255,255,255,0.6);
+  font-size: 18px;
+  cursor: pointer;
+  color: #123A5F;
+}
+.icon-btn.trash { color: #E04A2F; border-color: rgba(224,74,47,0.3); }
+.icon-btn.add { background: #123A5F; color: white; border-color: #123A5F; }
+.deck-bullets { list-style: none; padding: 0; margin: 0; }
+.deck-bullets li {
+  padding: 8px 0 8px 24px;
+  position: relative;
+  font-size: 16px;
+}
+.deck-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 14px;
+  width: 8px; height: 8px;
+  background: #123A5F;
+  border-radius: 50%;
+}
+.blocks {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+.block {
+  padding: 16px 20px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(18,58,95,0.12);
+  border-radius: 10px;
+  font: 700 14px/1.3 var(--mrt-font-body);
+  color: #123A5F;
+}
+.arrow { color: #123A5F; font-size: 20px; opacity: 0.5; }
+
 </style>
 </head>
 <body>
@@ -333,6 +410,57 @@ ul.vivid.square li::before { border-radius: 2px; }
         </ul>
       </div>
       </div>
+
+  
+  <div class="ui-showcase">
+    <h2>UI elements</h2>
+
+    <p><strong>Filter pills</strong></p>
+    <div class="ui-row">
+      <span class="pill on">All</span>
+      <span class="pill">Falconry</span>
+      <span class="pill">Sporting Dogs</span>
+      <span class="pill">GPS</span>
+      <span class="pill">VHF</span>
+    </div>
+
+    <p style="margin-top:24px"><strong>Tabs</strong></p>
+    <div class="tabs">
+      <span class="tab on">Overview</span>
+      <span class="tab">Products</span>
+      <span class="tab">Schedule</span>
+      <span class="tab">Settings</span>
+    </div>
+
+    <p style="margin-top:24px"><strong>Badges</strong></p>
+    <div class="ui-row">
+      <span class="badge">Active</span>
+      <span class="badge red">Alert</span>
+      <span class="badge black">Legacy</span>
+    </div>
+
+    <p style="margin-top:24px"><strong>Action buttons</strong></p>
+    <div class="ui-row">
+      <button class="icon-btn add">+</button>
+      <button class="icon-btn trash">×</button>
+    </div>
+
+    <p style="margin-top:24px"><strong>Deck bullets</strong></p>
+    <ul class="deck-bullets">
+      <li>Field Marshall 4000 — VHF tracking</li>
+      <li>Turbo GPS — real-time location</li>
+      <li>PocketLink — receiver</li>
+    </ul>
+
+    <p style="margin-top:24px"><strong>Related blocks</strong></p>
+    <div class="blocks">
+      <div class="block">Transmitter</div>
+      <span class="arrow">→</span>
+      <div class="block">Receiver</div>
+      <span class="arrow">→</span>
+      <div class="block">Display</div>
+    </div>
+  </div>
 
   <p class="note" style="margin-top:40px">Drag any panel by its header. Close and minimize are visual only.</p>
 </article>
