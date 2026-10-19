@@ -3,82 +3,125 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>V2 / V3 Comparison · Marshall Radio Telemetry</title>
-<meta name="description" content="Side-by-side comparison of current V2 and proposed V3: colors, elements, arcs, and typography.">
+<title>V3 Interface · Marshall Radio Telemetry</title>
+<meta name="description" content="Full V3 interface demonstration: glass surfaces, tables, draggable panels, and airy Gantt.">
 <link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
 <link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
 <script src="../../assets/js/nav.js?v=0970a167" defer></script>
 <style>
-.comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin: 32px 0; }
-@media (max-width: 800px) { .comparison { grid-template-columns: 1fr; } }
-.panel { border-radius: 12px; padding: 28px; position: relative; overflow: hidden; }
-.panel h3 { margin: 0 0 8px; font-size: 18px; }
-.panel .label { font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; margin-bottom: 12px; opacity: 0.7; }
-.v2 { background: #F1F1F1; border: 1px solid #C6C7BB; }
-.v3 {
-  background: linear-gradient(135deg, rgba(255,255,255,0.75) 0%, rgba(247,247,245,0.6) 100%);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: 0 8px 32px rgba(18,58,95,0.08), inset 0 1px 0 rgba(255,255,255,0.6);
+body {
+  background: linear-gradient(160deg, #F7F7F5 0%, #EEF2F6 40%, #F4F0ED 100%);
+  min-height: 100vh;
 }
-.v3::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(120deg, transparent 30%, rgba(224,74,47,0.06) 45%, rgba(18,58,95,0.08) 55%, transparent 70%);
-  pointer-events: none;
-  opacity: 0.7;
+.glass {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 14px;
+  box-shadow: 0 8px 32px rgba(18,58,95,0.07), inset 0 1px 0 rgba(255,255,255,0.7);
 }
-.swatch-row { display: flex; gap: 8px; margin: 16px 0; flex-wrap: wrap; }
-.swatch { width: 48px; height: 48px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
-.btn-demo { display: inline-block; font: 700 14px/1.4 var(--mrt-font-body); padding: 8px 16px; border-radius: 6px; margin: 6px 6px 6px 0; }
-.v3 .btn-demo {
-  background: rgba(255,255,255,0.4);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(18,58,95,0.25);
-  box-shadow: 0 0 12px rgba(18,58,95,0.08);
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(18,58,95,0.08);
+  cursor: move;
+  user-select: none;
 }
-.note { font-size: 13px; color: #555; margin-top: 16px; }
-.pair { margin: 12px 0; font-size: 14px; }
-.pair span { display: inline-block; width: 12px; height: 12px; border-radius: 2px; margin-right: 6px; vertical-align: middle; }
-.type-sample { margin: 12px 0; }
-.arc-rule { font-size: 14px; margin: 8px 0; }
-.box-demo {
+.panel-header .title { font-weight: 700; font-size: 14px; color: #123A5F; }
+.controls { display: flex; gap: 6px; }
+.ctrl {
+  width: 22px; height: 22px;
+  border-radius: 6px;
+  border: 1px solid rgba(18,58,95,0.15);
+  background: rgba(255,255,255,0.5);
+  font-size: 12px;
+  line-height: 1;
+  cursor: pointer;
+  color: #123A5F;
+}
+.ctrl:hover { background: rgba(255,255,255,0.8); }
+.panel-body { padding: 16px; }
+.btn {
+  display: inline-block;
+  font: 700 14px/1.4 var(--mrt-font-body);
+  padding: 8px 16px;
   border-radius: 8px;
-  padding: 16px;
-  margin: 12px 0;
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(18,58,95,0.2);
+  color: #123A5F;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(18,58,95,0.06);
+}
+.btn-danger {
+  border-color: rgba(224,74,47,0.35);
+  color: #E04A2F;
+}
+table.ui {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 14px;
 }
-.v2 .box-demo { background: white; border: 1px solid #C6C7BB; }
-.v3 .box-demo {
-  background: rgba(255,255,255,0.35);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255,255,255,0.5);
-  box-shadow: 0 4px 16px rgba(18,58,95,0.06);
+table.ui th {
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 12px;
+  color: #123A5F;
+  border-bottom: 1px solid rgba(18,58,95,0.1);
 }
-.notice-v3 {
-  background: rgba(253,242,240,0.6);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(224,74,47,0.15);
+table.ui td {
+  padding: 10px 12px;
+  border-bottom: 1px solid rgba(18,58,95,0.06);
+}
+table.ui tr:hover { background: rgba(18,58,95,0.03); }
+.gantt {
+  font-size: 13px;
+}
+.gantt-header {
+  display: grid;
+  grid-template-columns: 120px repeat(8, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #123A5F;
+  opacity: 0.7;
+}
+.gantt-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.gantt-bar {
+  height: 14px;
+  background: linear-gradient(90deg, rgba(18,58,95,0.15), rgba(18,58,95,0.25));
+  border: 1px solid rgba(18,58,95,0.25);
+  border-radius: 6px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(18,58,95,0.08);
+}
+.notice {
+  background: rgba(253,242,240,0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(224,74,47,0.12);
   color: #5C2A22;
   padding: 12px 16px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 13px;
   margin-top: 12px;
-  box-shadow: 0 0 20px rgba(224,74,47,0.08);
 }
-.prism {
+.workspace {
+  position: relative;
+  min-height: 600px;
+}
+.draggable {
   position: absolute;
-  right: -30px;
-  top: -30px;
-  width: 120px;
-  height: 120px;
-  background: conic-gradient(from 180deg, rgba(18,58,95,0.15), rgba(224,74,47,0.1), rgba(255,255,255,0.2), rgba(18,58,95,0.1));
-  border-radius: 50%;
-  filter: blur(20px);
-  opacity: 0.6;
-  pointer-events: none;
+  width: 340px;
+  z-index: 2;
 }
 </style>
 </head>
@@ -95,125 +138,79 @@
 
 <main><div class="wrap">
 <article>
-  <h1>V2 / V3 comparison</h1>
-  <p class="lead">Full side-by-side of the current V2 system and a proposed V3 direction. Arcs stay the single identity; colors, elements, and type are refined.</p>
+  <h1>V3 interface</h1>
+  <p class="lead">Airy glass surfaces, light tables, draggable panels, and a soft Gantt. Drag the panels by their headers.</p>
 
-  <h2>Color palette</h2>
-  <div class="comparison">
-    <div class="panel v2">
-      <div class="label">V2 · Current</div>
-      <div class="swatch-row">
-        <div class="swatch" style="background:#1B3A6A" title="M Blue #1B3A6A"></div>
-        <div class="swatch" style="background:#8A2F1D" title="M Red #8A2F1D"></div>
-        <div class="swatch" style="background:#C6C7BB" title="Khaki #C6C7BB"></div>
-        <div class="swatch" style="background:#F1F1F1" title="Light Grey #F1F1F1"></div>
-        <div class="swatch" style="background:#171D1A" title="Black #171D1A"></div>
+  <div class="workspace">
+    <div class="draggable glass" style="top:20px; left:0" data-draggable>
+      <div class="panel-header">
+        <span class="title">Transmitters</span>
+        <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
       </div>
-      <p class="note">Deep navy and brick red. Khaki as a secondary surface. Heavier overall.</p>
-    </div>
-    <div class="panel v3">
-      <div class="prism"></div>
-      <div class="label">V3 · Proposed</div>
-      <div class="swatch-row">
-        <div class="swatch" style="background:#123A5F" title="Refined Blue #123A5F"></div>
-        <div class="swatch" style="background:#E04A2F" title="Signal Red #E04A2F"></div>
-        <div class="swatch" style="background:#E8E6E1" title="Stone #E8E6E1"></div>
-        <div class="swatch" style="background:#F7F7F5" title="Warm White #F7F7F5"></div>
-        <div class="swatch" style="background:#0F1412" title="Near Black #0F1412"></div>
+      <div class="panel-body">
+        <table class="ui">
+          <thead><tr><th>Product</th><th>Freq</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>Turbo GPS</td><td>UHF</td><td>Active</td></tr>
+            <tr><td>Field Marshall 4000</td><td>VHF</td><td>Active</td></tr>
+            <tr><td>PocketLink</td><td>—</td><td>Legacy</td></tr>
+          </tbody>
+        </table>
       </div>
-      <p class="note">Cleaner blue, brighter signal red, lighter stone and warm white. Higher contrast, quieter luxury.</p>
+    </div>
+
+    <div class="draggable glass" style="top:20px; left:380px" data-draggable>
+      <div class="panel-header">
+        <span class="title">Schedule</span>
+        <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
+      </div>
+      <div class="panel-body gantt">
+        <div class="gantt-header"><span></span><span>W1</span><span>W2</span><span>W3</span><span>W4</span><span>W5</span><span>W6</span><span>W7</span><span>W8</span></div>
+        <div class="gantt-row"><span>Research</span><div style="position:relative"><div class="gantt-bar" style="width:32%"></div></div></div>
+        <div class="gantt-row"><span>Prototype</span><div style="position:relative"><div class="gantt-bar" style="width:40%; margin-left:18%"></div></div></div>
+        <div class="gantt-row"><span>Field test</span><div style="position:relative"><div class="gantt-bar" style="width:28%; margin-left:52%"></div></div></div>
+      </div>
+    </div>
+
+    <div class="draggable glass" style="top:280px; left:40px" data-draggable>
+      <div class="panel-header">
+        <span class="title">Actions</span>
+        <div class="controls"><button class="ctrl">−</button><button class="ctrl">×</button></div>
+      </div>
+      <div class="panel-body">
+        <button class="btn">Save</button>
+        <button class="btn">Export</button>
+        <button class="btn btn-danger">Delete</button>
+        <div class="notice">Connection lost. Retry when signal returns.</div>
+      </div>
     </div>
   </div>
 
-  <h2>Color profiles & pairings</h2>
-  <div class="comparison">
-    <div class="panel v2">
-      <div class="label">V2</div>
-      <div class="pair"><span style="background:#1B3A6A"></span> Blue text on Khaki</div>
-      <div class="pair"><span style="background:#F1F1F1"></span> Light Grey on Blue</div>
-      <div class="pair"><span style="background:#FFFFFF"></span> White on Black</div>
-      <div class="pair"><span style="background:#8A2F1D"></span> Brick red for accents</div>
-      <p class="note">Avoid Blue on Red or Blue on Black for text. Contrast target ≥ 4.5:1.</p>
-    </div>
-    <div class="panel v3">
-      <div class="prism"></div>
-      <div class="label">V3</div>
-      <div class="pair"><span style="background:#123A5F"></span> Refined Blue on Warm White or Stone</div>
-      <div class="pair"><span style="background:#F7F7F5"></span> Light text on Refined Blue</div>
-      <div class="pair"><span style="background:#FFFFFF"></span> White on Near Black</div>
-      <div class="pair"><span style="background:#E04A2F"></span> Signal Red only for emphasis or errors</div>
-      <p class="note">Same contrast rules. Prefer outline treatments. Red is brighter and used more sparingly.</p>
-    </div>
-  </div>
-
-  <h2>Elements</h2>
-  <div class="comparison">
-    <div class="panel v2">
-      <div class="label">V2</div>
-      <div class="btn-demo" style="background:#1B3A6A;color:white;border:none">Primary (filled)</div>
-      <div class="btn-demo" style="background:transparent;color:#1B3A6A;border:1.5px solid #1B3A6A">Secondary</div>
-      <div class="btn-demo" style="background:#8A2F1D;color:white;border:none">Destructive</div>
-      <div class="box-demo">Panel with heavier border and fill tendency.</div>
-      <p class="note">Solid fills for primary actions. Tables with blue header bars. Heavier visual weight.</p>
-    </div>
-    <div class="panel v3">
-      <div class="prism"></div>
-      <div class="label">V3</div>
-      <div class="btn-demo">Primary (glass)</div>
-      <div class="btn-demo">Secondary</div>
-      <div class="btn-demo" style="border-color:rgba(224,74,47,0.4);color:#E04A2F">Destructive</div>
-      <div class="box-demo">Glass panel. Soft blur, light refraction, thin highlight.</div>
-      <div class="notice-v3">Unable to save. Check your connection and try again.</div>
-      <p class="note">Glass surfaces, soft blue glow, subtle prism wash. No hard left bars.</p>
-    </div>
-  </div>
-
-  <h2>How to use the arcs</h2>
-  <div class="comparison">
-    <div class="panel v2">
-      <div class="label">V2</div>
-      <div class="arc-rule">• Large and faint (white or light grey)</div>
-      <div class="arc-rule">• One per layout only</div>
-      <div class="arc-rule">• Cropped, running off the edge</div>
-      <div class="arc-rule">• Never small, repeated, or outlined</div>
-      <div class="arc-rule">• Often a soft photo overlay</div>
-      <p class="note">Works as atmosphere but can feel soft and inherited from older assets.</p>
-    </div>
-    <div class="panel v3">
-      <div class="prism"></div>
-      <div class="label">V3</div>
-      <div class="arc-rule">• Single thin vector stroke</div>
-      <div class="arc-rule">• Very low opacity (4–8%)</div>
-      <div class="arc-rule">• Refined Blue or near-black on light; white on dark</div>
-      <div class="arc-rule">• Large, cropped, never filled</div>
-      <div class="arc-rule">• One per layout; never a pattern</div>
-      <p class="note">Same rules, sharper execution. Optional soft glow behind the arc for depth.</p>
-    </div>
-  </div>
-
-  <h2>Typography</h2>
-  <div class="comparison">
-    <div class="panel v2">
-      <div class="label">V2</div>
-      <div class="type-sample" style="font:700 42px/1.15 var(--mrt-font-heading);color:#1B3A6A">Display 42px</div>
-      <div class="type-sample" style="font:700 22px/1.3 var(--mrt-font-heading);color:#1B3A6A">Heading 22px</div>
-      <div class="type-sample" style="font:400 16px/1.6 var(--mrt-font-body)">Body 16px / 1.6. Matter Regular.</div>
-      <p class="note">Matter Regular 400 and Bold 700 only. Optional tighter tracking on large sizes (−0.03em).</p>
-    </div>
-    <div class="panel v3">
-      <div class="prism"></div>
-      <div class="label">V3</div>
-      <div class="type-sample" style="font:700 42px/1.15 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.02em;text-shadow:0 0 20px rgba(18,58,95,0.15)">Display 42px</div>
-      <div class="type-sample" style="font:700 22px/1.3 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.015em">Heading 22px</div>
-      <div class="type-sample" style="font:400 16px/1.65 var(--mrt-font-body)">Body 16px / 1.65. Slightly more open.</div>
-      <p class="note">Same faces and weights. Optional soft glow on large display type.</p>
-    </div>
-  </div>
-
-  <p class="note">Working comparison only. Current guidelines remain in place until a direction is approved.</p>
+  <p class="note" style="margin-top:40px">Panels are draggable by the header. Close and minimize buttons are visual only in this demo.</p>
 </article>
 </main></div>
 
-<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · V2 / V3 comparison</p></div></footer>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · V3 interface</p></div></footer>
+
+<script>
+document.querySelectorAll('[data-draggable]').forEach(el => {
+  const header = el.querySelector('.panel-header');
+  let isDown = false, startX, startY, origX, origY;
+  header.addEventListener('mousedown', e => {
+    isDown = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    origX = el.offsetLeft;
+    origY = el.offsetTop;
+    el.style.zIndex = 10;
+  });
+  document.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    el.style.left = (origX + e.clientX - startX) + 'px';
+    el.style.top = (origY + e.clientY - startY) + 'px';
+  });
+  document.addEventListener('mouseup', () => { isDown = false; el.style.zIndex = 2; });
+});
+</script>
 </body>
 </html>
