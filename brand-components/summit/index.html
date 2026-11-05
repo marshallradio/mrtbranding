@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summit Design Guidelines · Marshall Radio Telemetry</title>
+<meta name="description" content="Summit design guidelines with component samples: pills, tabs, badges, deck titles, high-contrast panels, and UI elements.">
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css?v=0970a167">
+<script src="../../assets/js/nav.js?v=0970a167" defer></script>
+<style>
+body { background: #F7F7F5; }
+.spec { margin: 40px 0; }
+.spec h2 { font: 700 28px/1.2 var(--mrt-font-heading); color: #123A5F; margin-bottom: 16px; }
+.swatch-row { display: flex; gap: 12px; flex-wrap: wrap; margin: 16px 0; }
+.swatch { width: 80px; }
+.swatch div { height: 56px; border-radius: 8px; border: 1px solid rgba(0,0,0,0.08); }
+.swatch span { display: block; font-size: 12px; margin-top: 6px; color: #444; }
+.ui-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; align-items: center; }
+.pill { padding: 6px 14px; border-radius: 999px; font: 700 13px/1.2 var(--mrt-font-body); background: white; border: 1px solid rgba(18,58,95,0.15); color: #123A5F; }
+.pill.on { background: #123A5F; color: white; }
+.badge { padding: 2px 8px; border-radius: 6px; font: 700 11px/1.4 var(--mrt-font-body); background: #3B82F6; color: white; }
+.badge.red { background: #E04A2F; }
+.badge.black { background: #0F1412; }
+.badge.green { background: #059669; }
+.tab { padding: 8px 16px; border-bottom: 2px solid transparent; font: 700 14px/1.2 var(--mrt-font-body); color: #555; cursor: pointer; }
+.tab.on { border-bottom-color: #123A5F; color: #123A5F; }
+.deck-card { background: white; border: 1px solid rgba(18,58,95,0.1); border-radius: 12px; padding: 32px; max-width: 560px; margin: 12px 0; }
+.hc-card { background: #123A5F; border-radius: 12px; padding: 32px; max-width: 560px; margin: 12px 0; color: white; }
+.btn { display: inline-block; padding: 10px 20px; border-radius: 999px; font: 700 14px/1.2 var(--mrt-font-body); text-decoration: none; border: 1px solid transparent; }
+.btn-primary { background: #123A5F; color: white; }
+.btn-outline { background: transparent; border-color: #123A5F; color: #123A5F; }
+.note { font-size: 14px; color: #555; margin-top: 12px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <button class="burger" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="168" height="30"><span>Brand Guidelines</span></a>
+  <nav class="nav" aria-label="Main">
+    <a href="../../">Home</a>
+    <a href="../../brand-components/typography/">Typography</a>
+    <a href="../web-ui/">Web UI</a>
+    <a href="./">Summit</a>
+  </nav>
+</div></header>
+
+<main><div class="wrap">
+<article>
+  <h1>Summit design guidelines</h1>
+  <p class="lead">Component samples for the Summit direction. Refined blue, high-contrast panels, filter pills, tabs, badges, deck titles, and action buttons.</p>
+
+  <div class="spec">
+    <h2>Color</h2>
+    <div class="swatch-row">
+      <div class="swatch"><div style="background:#123A5F"></div><span>Refined Blue<br>#123A5F</span></div>
+      <div class="swatch"><div style="background:#3B82F6"></div><span>Vivid Blue<br>#3B82F6</span></div>
+      <div class="swatch"><div style="background:#E04A2F"></div><span>Signal Red<br>#E04A2F</span></div>
+      <div class="swatch"><div style="background:#0F1412"></div><span>Near Black<br>#0F1412</span></div>
+      <div class="swatch"><div style="background:#F7F7F5"></div><span>Warm White<br>#F7F7F5</span></div>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Filter pills</h2>
+    <div class="ui-row">
+      <span class="pill on">All</span>
+      <span class="pill">Falconry</span>
+      <span class="pill">GPS</span>
+      <span class="pill">Receivers</span>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Tabs</h2>
+    <div class="ui-row" style="border-bottom:1px solid rgba(18,58,95,0.1);">
+      <span class="tab on">Overview</span>
+      <span class="tab">Specs</span>
+      <span class="tab">Accessories</span>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Badges</h2>
+    <div class="ui-row">
+      <span class="badge">Active</span>
+      <span class="badge green">In stock</span>
+      <span class="badge red">Alert</span>
+      <span class="badge black">Legacy</span>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Buttons</h2>
+    <div class="ui-row">
+      <a class="btn btn-primary">Add to cart</a>
+      <a class="btn btn-outline">Learn more</a>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>Deck title + subtitle</h2>
+    <div class="deck-card">
+      <div style="font:700 42px/1.15 var(--mrt-font-heading);color:#123A5F;letter-spacing:-0.02em;margin:0 0 8px">Field Marshall 4000</div>
+      <div style="font:400 18px/1.4 var(--mrt-font-body);color:#555;margin:0">VHF tracking for falconry and sporting dogs</div>
+    </div>
+  </div>
+
+  <div class="spec">
+    <h2>High contrast panel</h2>
+    <div class="hc-card">
+      <div style="font:700 48px/1.05 var(--mrt-font-heading);letter-spacing:-0.03em;margin:0 0 8px">Field Marshall 4000</div>
+      <div style="font:400 18px/1.4 var(--mrt-font-body);color:rgba(255,255,255,0.85);margin:0">Maximum clarity for primary actions and key messages</div>
+    </div>
+  </div>
+
+  <p class="note" style="margin-top:40px">Summit component samples. Pair with the Website design guideline for storefront work.</p>
+</article>
+</main></div>
+
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Summit design guidelines</p></div></footer>
+</body>
+</html>
