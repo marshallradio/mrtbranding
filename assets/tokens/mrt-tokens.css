@@ -1,24 +1,7 @@
 /* Marshall Radio Telemetry design tokens. Colors and logo rules.
-   V2: MatterXH fonts hosted for visual preview (confirm license for public use).
+   Type: Helvetica LT Pro for titles, Source Sans Pro for body (Adobe Fonts kit ytg2dik).
  */
-@font-face {
-  font-family: "Matter";
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/MatterXH-Regular.woff2") format("woff2"),
-       url("../fonts/MatterXH-Regular.woff") format("woff"),
-       local("Matter Regular"), local("Matter-Regular"), local("Matter");
-}
-@font-face {
-  font-family: "Matter";
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-  src: url("../fonts/MatterXH-Bold.woff2") format("woff2"),
-       url("../fonts/MatterXH-Bold.woff") format("woff"),
-       local("Matter Bold"), local("Matter-Bold");
-}
+@import url('https://use.typekit.net/ytg2dik.css');
 :root {
  /* Colors. Tints follow the guide's 20% tint step system. */
  --mrt-color-blue: #1B3A6A; /* M Blue · RGB 27, 58, 106 · CMYK 100, 85, 30, 20 */
@@ -39,8 +22,8 @@
  --mrt-color-black-60: #747776; /* Black 60% */
  --mrt-color-black-40: #A2A5A3; /* Black 40% */
  --mrt-color-black-20: #D1D2D1; /* Black 20% */
- --mrt-font-heading: "Matter", "Helvetica Neue", Helvetica, Arial, sans-serif;
- --mrt-font-body: "Matter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ --mrt-font-heading: "helvetica-lt-pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+ --mrt-font-body: "source-sans-pro", "Source Sans Pro", "Source Sans 3", system-ui, sans-serif;
  --mrt-font-mono: Menlo, Monaco, Consolas, "Courier New", monospace;
  --mrt-space-1: 4px;
  --mrt-space-2: 8px;
