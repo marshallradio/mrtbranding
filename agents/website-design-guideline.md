@@ -28,10 +28,12 @@ Disabled controls drop to 20 percent opacity, or to a 20 percent border and labe
 
 ### Faces
 
+The Marshall Radio storefront uses **Helvetica LT Pro Bold** for titles and **Source Sans Pro** for body text and UI.
+
 English (`lang="en"`) is the public default.
 
 - Titles (`h1`–`h6`, `.h1`–`.h6`, and bold labels such as `.mr-mega-label`) are **Helvetica LT Pro Bold**, weight 700. Loaded from Adobe Fonts kit `ytg2dik` as the family `mr-helvetica`.
-- Body, buttons, and anything at weight 400–600 are **Source Sans Pro** on that same family. The Regular file is optically bumped by half a point (`size-adjust: 104.1667%`). Bold files are not.
+- Body, buttons, and anything at weight 400–600 are **Source Sans Pro**. The Regular file is optically bumped by half a point (`size-adjust: 104.1667%`). Bold files are not.
 - Do not synthesize a missing weight. A semibold label stays Source Sans. It does not snap to Helvetica Bold.
 
 Other Latin locales (German, French, Spanish, Italian, Dutch, and the rest) stay on **Matter** (Light 300, Regular 400, Medium 500, SemiBold 600).
