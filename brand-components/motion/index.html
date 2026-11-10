@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Motion · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.demo { background: white; padding: 32px; border-radius: 12px; margin: 16px 0; border: 1px solid #eee; }
+.box { width: 60px; height: 60px; background: #487FFF; border-radius: 8px; transition: transform 200ms ease; }
+.box:hover { transform: scale(1.05); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { padding: 10px; text-align: left; border-bottom: 1px solid #eee; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="./" class="on">Motion</a>
+  </nav>
+</div></header>
+<main><div class="wrap" style="max-width:800px">
+  <h1>Motion</h1>
+  <p class="lead">Motion explains a change. No bounce, no overshoot.</p>
+  <div class="demo">
+    <h2>Hover (desktop only)</h2>
+    <div class="box"></div>
+    <p style="font-size:13px;color:#555">200 ms ease. Hover is disabled below 1280 px.</p>
+  </div>
+  <table>
+    <thead><tr><th>Use</th><th>Duration</th><th>Curve</th></tr></thead>
+    <tbody>
+      <tr><td>Instant / color</td><td>80–120 ms</td><td>ease</td></tr>
+      <tr><td>Button hover</td><td>200 ms</td><td>ease</td></tr>
+      <tr><td>Menus, tabs</td><td>220–300 ms</td><td>cubic-bezier(0.4, 0, 0.2, 1)</td></tr>
+      <tr><td>Panels, drawers</td><td>360–500 ms</td><td>cubic-bezier(0.33, 1, 0.68, 1)</td></tr>
+      <tr><td>Section reveals</td><td>1000–1300 ms</td><td>cubic-bezier(0.16, 1, 0.3, 1)</td></tr>
+    </tbody>
+  </table>
+  <ul>
+    <li>No bounce on UI controls.</li>
+    <li>Respect prefers-reduced-motion: use fades instead of movement.</li>
+    <li>Carousels use Embla with grab cursor and 40 px pill arrows.</li>
+  </ul>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Motion</p></div></footer>
+</body>
+</html>
