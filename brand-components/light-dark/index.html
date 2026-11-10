@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Light and Dark Modes · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.modes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 900px; margin: 32px auto; }
+@media (max-width: 700px) { .modes { grid-template-columns: 1fr; } }
+.mode { padding: 32px; border-radius: 12px; }
+.light { background: #fff; border: 1px solid #eee; color: #161A1E; }
+.dark { background: #161A1E; color: white; }
+.swatch { display: inline-block; width: 48px; height: 48px; border-radius: 8px; margin-right: 8px; vertical-align: middle; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="./" class="on">Light / Dark</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+  <h1>Light and Dark Modes</h1>
+  <p class="lead">Light is the default. Dark is for high-focus or photographic contexts. Every component needs both treatments.</p>
+  <div class="modes">
+    <div class="mode light">
+      <h2>Light</h2>
+      <p>White or Warm White ground. Ink text. Primary Blue actions.</p>
+      <div><span class="swatch" style="background:#fff;border:1px solid #ddd"></span> White</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#F7F7F5"></span> Warm White</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#161A1E"></span> Ink text</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#487FFF"></span> Primary Blue</div>
+    </div>
+    <div class="mode dark">
+      <h2>Dark</h2>
+      <p>Ink or Ink Deep ground. White text. Primary Blue actions.</p>
+      <div><span class="swatch" style="background:#161A1E;border:1px solid #333"></span> Ink</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#070A10"></span> Ink Deep</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#fff"></span> White text</div>
+      <div style="margin-top:8px"><span class="swatch" style="background:#487FFF"></span> Primary Blue</div>
+    </div>
+  </div>
+  <ul>
+    <li>Never use pure black (#000) or pure white in large fields unless photographic.</li>
+    <li>Body text contrast ≥ 4.5:1. Large text and UI graphics ≥ 3:1.</li>
+    <li>Focus rings remain visible in both modes.</li>
+  </ul>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Light and Dark</p></div></footer>
+</body>
+</html>
