@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Visual Examples · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2, h3 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.example { background: white; border: 1px solid #eee; border-radius: 12px; padding: 24px; margin: 24px 0; }
+.lockup { display: flex; align-items: center; gap: 16px; padding: 16px; background: #f7f7f5; border-radius: 8px; }
+.rule { width: 1px; height: 28px; background: #161A1E; opacity: .4; }
+.btn-primary { background: #487FFF; color: white; border: none; border-radius: 40px; padding: 12px 24px; font-family: "source-sans-pro", sans-serif; font-size: 15px; }
+.btn-secondary { background: transparent; color: #161A1E; border: 1.5px solid #161A1E; border-radius: 40px; padding: 11px 23px; font-family: "source-sans-pro", sans-serif; font-size: 15px; }
+.chart { height: 120px; display: flex; align-items: flex-end; gap: 8px; padding: 16px; background: #f7f7f5; border-radius: 8px; }
+.bar { background: #487FFF; width: 32px; border-radius: 4px 4px 0 0; }
+.bar.alert { background: #E23B2F; }
+.post-mock { width: 280px; height: 280px; background: #070A10; color: white; border-radius: 12px; position: relative; overflow: hidden; display: flex; align-items: flex-end; padding: 20px; }
+.post-mock h3 { margin: 0; font-size: 22px; line-height: 1.05; }
+.sig { border-top: 2px solid #487FFF; padding-top: 12px; max-width: 320px; font-size: 14px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="168" height="30"><span>Brand Guidelines</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="../co-branding/">Co-branding</a>
+    <a href="../templates/">Templates</a>
+    <a href="../product-ui/">Product UI</a>
+    <a href="../data-visualization/">Data</a>
+    <a href="./" class="on">Examples</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+<article style="max-width: 900px;">
+  <h1>Visual Examples</h1>
+  <p class="lead">Practical examples of co-branding, UI, data, and templates.</p>
+
+  <div class="example">
+    <h2>Co-branding lockup</h2>
+    <div class="lockup">
+      <strong style="font-family: helvetica-lt-pro, sans-serif;">MARSHALL RADIO</strong>
+      <div class="rule"></div>
+      <span style="opacity:.7;">Partner Logo</span>
+    </div>
+    <p>Horizontal lockup with equal optical height and a thin rule. Marshall Radio leads.</p>
+  </div>
+
+  <div class="example">
+    <h2>Buttons</h2>
+    <button class="btn-primary">Primary action</button>
+    &nbsp;
+    <button class="btn-secondary">Secondary</button>
+    <p>Primary Blue solid pill. Secondary outline. One primary per view.</p>
+  </div>
+
+  <div class="example">
+    <h2>Data chart</h2>
+    <div class="chart">
+      <div class="bar" style="height: 60%"></div>
+      <div class="bar" style="height: 85%"></div>
+      <div class="bar" style="height: 45%"></div>
+      <div class="bar alert" style="height: 30%"></div>
+    </div>
+    <p>Primary Blue for series. Signal Red only for alerts. Always show units.</p>
+  </div>
+
+  <div class="example">
+    <h2>Social post (1:1)</h2>
+    <div class="post-mock">
+      <h3>Track further.<br>Stay connected.</h3>
+    </div>
+    <p>Photography or dark ground, white type, logo clear of the headline.</p>
+  </div>
+
+  <div class="example">
+    <h2>Email signature</h2>
+    <div class="sig">
+      <strong style="font-family: helvetica-lt-pro, sans-serif;">Alex Rivera</strong><br>
+      Field Support · Marshall Radio Telemetry<br>
+      +1 555 123 4567 · alex.rivera@marshallradio.com
+    </div>
+    <p>Clean, small logo, Primary Blue rule. No large graphics.</p>
+  </div>
+
+  <h2>Downloadable templates</h2>
+  <ul>
+    <li><a href="../../assets/templates/email/signature.html">Email signature (HTML)</a></li>
+    <li><a href="../../assets/templates/stationery/letterhead.html">Letterhead (HTML)</a></li>
+    <li><a href="../../assets/templates/social/post-1x1.html">Social post 1:1 (HTML)</a></li>
+  </ul>
+</article>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Visual Examples</p></div></footer>
+</body>
+</html>
