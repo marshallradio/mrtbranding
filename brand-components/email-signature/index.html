@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Email Signature Generator · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 1100px; margin: 32px auto; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+.form { background: white; padding: 24px; border-radius: 12px; border: 1px solid #eee; }
+label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; }
+input { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 15px; }
+.preview { background: white; padding: 24px; border-radius: 12px; border: 1px solid #eee; }
+.sig { border-top: 2px solid #487FFF; padding-top: 14px; font-size: 14px; line-height: 1.45; max-width: 380px; }
+.sig .name { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; font-size: 16px; margin: 0 0 2px; }
+.sig .title { color: #555; margin: 0 0 8px; }
+.sig .contact { margin: 0; }
+.sig img { margin-top: 10px; }
+.btn { background: #487FFF; color: white; border: none; border-radius: 40px; padding: 12px 24px; font-family: inherit; font-size: 15px; cursor: pointer; margin-top: 16px; }
+.btn:hover { opacity: .9; }
+.copy { background: #161A1E; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="../templates/">Templates</a>
+    <a href="../email-signature/" class="on">Email signature</a>
+    <a href="../co-branding/">Co-branding</a>
+    <a href="../visual-examples/">Examples</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+  <h1>Email Signature Generator</h1>
+  <p class="lead">Create a clean, on-brand email signature. Fill the form and copy the result.</p>
+  <div class="grid">
+    <div class="form">
+      <label>Full name</label>
+      <input id="name" value="Alex Rivera" placeholder="Full name">
+      <label>Title</label>
+      <input id="title" value="Field Support" placeholder="Title">
+      <label>Phone</label>
+      <input id="phone" value="+1 555 123 4567" placeholder="Phone">
+      <label>Email</label>
+      <input id="email" value="alex.rivera@marshallradio.com" placeholder="Email">
+      <label>Website</label>
+      <input id="web" value="marshallradio.com" placeholder="Website">
+      <button class="btn" onclick="update()">Update preview</button>
+      <button class="btn copy" onclick="copySig()">Copy HTML</button>
+    </div>
+    <div class="preview">
+      <h2>Preview</h2>
+      <div id="sig" class="sig">
+        <p class="name">Alex Rivera</p>
+        <p class="title">Field Support · Marshall Radio Telemetry</p>
+        <p class="contact">+1 555 123 4567<br>alex.rivera@marshallradio.com<br>marshallradio.com</p>
+        <img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="140" height="25">
+      </div>
+    </div>
+  </div>
+  <p style="margin-top:32px"><a href="../templates/">← Back to templates</a></p>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Email Signature Generator</p></div></footer>
+<script>
+function update(){
+  const n = document.getElementById('name').value || 'Name';
+  const t = document.getElementById('title').value || 'Title';
+  const p = document.getElementById('phone').value || '';
+  const e = document.getElementById('email').value || '';
+  const w = document.getElementById('web').value || 'marshallradio.com';
+  document.getElementById('sig').innerHTML = `
+    <p class="name">${n}</p>
+    <p class="title">${t} · Marshall Radio Telemetry</p>
+    <p class="contact">${p}<br>${e}<br>${w}</p>
+    <img src="../../assets/logos/mrt-logo.svg" alt="Marshall Radio Telemetry" width="140" height="25">
+  `;
+}
+function copySig(){
+  const html = document.getElementById('sig').outerHTML;
+  navigator.clipboard.writeText(html).then(()=>alert('Signature HTML copied. Paste into your email client.'));
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('input', update));
+</script>
+</body>
+</html>
