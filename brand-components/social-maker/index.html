@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Social Post Maker · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.grid { display: grid; grid-template-columns: 320px 1fr; gap: 32px; max-width: 1000px; margin: 32px auto; }
+@media (max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+.form { background: white; padding: 24px; border-radius: 12px; border: 1px solid #eee; }
+label { display: block; font-size: 13px; font-weight: 600; margin: 12px 0 4px; }
+input, select { width: 100%; padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 15px; }
+.post { width: 360px; height: 360px; background: #070A10; color: white; border-radius: 12px; position: relative; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end; padding: 28px; }
+.post.story { height: 640px; width: 360px; }
+.post h3 { margin: 0 0 6px; font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; font-size: 32px; line-height: 1.05; }
+.post p { margin: 0; font-size: 15px; opacity: .9; }
+.post .logo { position: absolute; bottom: 20px; left: 28px; font-weight: 700; font-size: 13px; letter-spacing: .02em; }
+.btn { background: #487FFF; color: white; border: none; border-radius: 40px; padding: 12px 24px; font-family: inherit; font-size: 15px; cursor: pointer; margin-top: 16px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="../templates/">Templates</a>
+    <a href="../social-maker/" class="on">Social maker</a>
+    <a href="../email-signature/">Email signature</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+  <h1>Social Post Maker</h1>
+  <p class="lead">Generate a 1:1 post or story with on-brand type and placement.</p>
+  <div class="grid">
+    <div class="form">
+      <label>Headline</label>
+      <input id="headline" value="Track further. Stay connected.">
+      <label>Subline</label>
+      <input id="sub" value="Turbo GPS · Field Marshall">
+      <label>Format</label>
+      <select id="format">
+        <option value="post">1:1 Post</option>
+        <option value="story">9:16 Story</option>
+      </select>
+      <button class="btn" onclick="update()">Update</button>
+    </div>
+    <div>
+      <div id="post" class="post">
+        <h3>Track further.<br>Stay connected.</h3>
+        <p>Turbo GPS · Field Marshall</p>
+        <div class="logo">MARSHALL RADIO</div>
+      </div>
+    </div>
+  </div>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Social Post Maker</p></div></footer>
+<script>
+function update(){
+  const h = document.getElementById('headline').value || 'Headline';
+  const s = document.getElementById('sub').value || '';
+  const f = document.getElementById('format').value;
+  const el = document.getElementById('post');
+  el.className = 'post' + (f === 'story' ? ' story' : '');
+  el.innerHTML = `<h3>${h.replace(/\n/g,'<br>')}</h3><p>${s}</p><div class="logo">MARSHALL RADIO</div>`;
+}
+document.querySelectorAll('input,select').forEach(i=>i.addEventListener('input', update));
+</script>
+</body>
+</html>
