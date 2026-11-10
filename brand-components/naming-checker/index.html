@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Naming Checker · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.box { max-width: 640px; margin: 32px auto; background: white; padding: 32px; border-radius: 12px; border: 1px solid #eee; }
+input { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; margin-bottom: 16px; }
+.result { padding: 16px; border-radius: 8px; margin-top: 12px; }
+.ok { background: #e8f5e9; color: #1b5e20; }
+.warn { background: #fff3e0; color: #e65100; }
+.bad { background: #ffebee; color: #c62828; }
+.examples { font-size: 14px; color: #555; margin-top: 24px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="../naming-checker/" class="on">Naming checker</a>
+    <a href="../../naming/">Naming rules</a>
+  </nav>
+</div></header>
+<main><div class="wrap">
+  <div class="box">
+    <h1>Naming Checker</h1>
+    <p>Check product and company name usage against brand rules.</p>
+    <input id="name" placeholder="Enter a name (e.g. Turbo GPS, Field Marshall)" oninput="check()">
+    <div id="result"></div>
+    <div class="examples">
+      <strong>Correct examples:</strong> Turbo GPS, Field Marshall, PocketLink, TrackPack, Marshall Radio Telemetry<br>
+      <strong>Incorrect:</strong> TurboGPS, field marshall, Pocket Link, MarshallRadio
+    </div>
+  </div>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Naming Checker</p></div></footer>
+<script>
+const correct = ['Turbo GPS','Field Marshall','PocketLink','TrackPack','GPS Pro','Marshall Radio','Marshall Radio Telemetry','Desert Case','EZ Twist','Power Tower'];
+function check(){
+  const v = document.getElementById('name').value.trim();
+  const r = document.getElementById('result');
+  if (!v) { r.innerHTML = ''; return; }
+  const exact = correct.find(c => c.toLowerCase() === v.toLowerCase());
+  if (exact && v === exact) {
+    r.className = 'result ok';
+    r.innerHTML = '✓ Correct: "' + exact + '"';
+  } else if (exact) {
+    r.className = 'result warn';
+    r.innerHTML = '⚠ Close. Preferred form: <strong>' + exact + '</strong>';
+  } else if (v.includes(' ') && v === v.toLowerCase()) {
+    r.className = 'result bad';
+    r.innerHTML = '✗ Avoid all-lowercase. Use title case for product names.';
+  } else {
+    r.className = 'result warn';
+    r.innerHTML = '? Not in the approved list. Check the <a href="../../naming/">naming rules</a>.';
+  }
+}
+</script>
+</body>
+</html>
