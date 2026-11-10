@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Layout · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.grid-demo { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin: 16px 0; }
+.cell { background: #e8eef8; height: 60px; border-radius: 6px; }
+.bento { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin: 16px 0; }
+.bento div { background: #f7f7f5; border-radius: 12px; padding: 24px; min-height: 80px; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="./" class="on">Layout</a>
+  </nav>
+</div></header>
+<main><div class="wrap" style="max-width:800px">
+  <h1>Layout and Spacing</h1>
+  <p class="lead">4 px spacing scale. One primary action. One hero per page.</p>
+  <h2>Spacing scale</h2>
+  <p>4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 96 px.</p>
+  <ul>
+    <li>Inside components: 8–16 px</li>
+    <li>Between components: 24–48 px</li>
+    <li>Between sections: 64–96 px</li>
+  </ul>
+  <h2>Grid example</h2>
+  <div class="grid-demo">
+    <div class="cell"></div><div class="cell"></div><div class="cell"></div><div class="cell"></div>
+  </div>
+  <h2>Bento-style</h2>
+  <div class="bento">
+    <div>Larger tile</div>
+    <div>Smaller</div>
+  </div>
+  <p>Max content width 1280 px. Reading width ≤ 68 characters. Cards: 20 px radius, flat.</p>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Layout</p></div></footer>
+</body>
+</html>
