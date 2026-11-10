@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product UI · Marshall Radio Telemetry</title>
+<link rel="icon" href="../../assets/logos/mrt-site-icon-16.png">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<link rel="stylesheet" href="https://use.typekit.net/ytg2dik.css">
+<script src="../../assets/js/nav.js" defer></script>
+<style>
+body { font-family: "source-sans-pro", sans-serif; background: #fafafa; }
+h1, h2, h3 { font-family: "helvetica-lt-pro", sans-serif; font-weight: 700; }
+.section { background: white; padding: 32px; border-radius: 12px; margin: 24px 0; border: 1px solid #eee; }
+.btn-primary { background: #487FFF; color: white; border: none; border-radius: 40px; padding: 12px 28px; font-family: inherit; font-size: 15px; cursor: pointer; }
+.btn-secondary { background: transparent; color: #161A1E; border: 1.5px solid #161A1E; border-radius: 40px; padding: 11px 27px; font-family: inherit; font-size: 15px; margin-left: 8px; }
+.btn-danger { background: #E23B2F; color: white; border: none; border-radius: 40px; padding: 12px 28px; font-family: inherit; font-size: 15px; margin-left: 8px; }
+input, select { padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; font-family: inherit; font-size: 15px; width: 240px; }
+label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+.table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.table th, .table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid #eee; }
+.table th { background: #f7f7f5; font-weight: 600; }
+.badge { display: inline-block; background: #487FFF; color: white; font-size: 12px; padding: 4px 10px; border-radius: 20px; }
+.card { border: 1px solid #eee; border-radius: 12px; padding: 20px; max-width: 280px; }
+.dark { background: #161A1E; color: white; padding: 24px; border-radius: 12px; margin-top: 16px; }
+.dark .btn-primary { background: #487FFF; }
+</style>
+</head>
+<body>
+<header class="top" data-header><div class="wrap">
+  <a class="brand" href="../../"><img src="../../assets/logos/mrt-mark.svg" alt="" width="36" height="21" style="vertical-align:middle;margin-right:8px"><span style="font-family:helvetica-lt-pro,sans-serif;font-weight:700">Marshall Radio</span></a>
+  <nav class="nav">
+    <a href="../../">Home</a>
+    <a href="../product-ui/">Product UI</a>
+    <a href="./" class="on">Components</a>
+  </nav>
+</div></header>
+<main><div class="wrap" style="max-width:900px">
+  <h1>Product UI Components</h1>
+  <p class="lead">Live examples of buttons, forms, tables, and cards. Light is default. Dark is available.</p>
+
+  <div class="section">
+    <h2>Buttons</h2>
+    <p>One primary action per view. 40–48 px height. Large radius.</p>
+    <button class="btn-primary">Primary action</button>
+    <button class="btn-secondary">Secondary</button>
+    <button class="btn-danger">Delete</button>
+    <div class="dark">
+      <p style="margin:0 0 12px;font-size:14px">Dark surface</p>
+      <button class="btn-primary">Primary on dark</button>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Forms</h2>
+    <label>Product name</label>
+    <input placeholder="Turbo GPS">
+    <label style="margin-top:12px">Region</label>
+    <select><option>United States</option><option>Middle East</option><option>Europe</option></select>
+    <p style="font-size:13px;color:#555;margin-top:12px">Labels above fields. 16 px minimum. Errors use text + icon, never color alone.</p>
+  </div>
+
+  <div class="section">
+    <h2>Table</h2>
+    <table class="table">
+      <thead><tr><th>Product</th><th>Range</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Turbo GPS</td><td>20 miles</td><td><span class="badge">In stock</span></td></tr>
+        <tr><td>Field Marshall</td><td>15 miles</td><td><span class="badge">In stock</span></td></tr>
+        <tr><td>PocketLink</td><td>—</td><td>Limited</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Card</h2>
+    <div class="card">
+      <h3 style="margin-top:0">Turbo GPS</h3>
+      <p style="font-size:14px;color:#555">Long-range tracking for falconry.</p>
+      <button class="btn-primary" style="margin-top:8px">View details</button>
+    </div>
+  </div>
+</div></main>
+<footer class="foot"><div class="wrap"><p>Marshall Radio Telemetry · Product UI</p></div></footer>
+</body>
+</html>
