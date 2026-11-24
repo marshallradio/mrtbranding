@@ -18,6 +18,7 @@ Machine-readable tokens in the DESIGN.md format (google-labs-code/design.md): `G
 | `/agents/tokens.md` | Writing CSS, components, Tailwind config or any code that needs brand values. |
 | `/agents/imagery.md` | Choosing photos, backgrounds or the arcs graphic device. |
 | `/agents/voice.md` | Writing or editing any English copy: web, product pages, email, social, support. |
+| `/agents/translation.md` | Translating any catalog copy, product page, collection, option, metaobject or metafield. English is the source. |
 | `/agents/regions.md` | Regional sites (USA/Worldwide, Europe, United Kingdom, Gulf, China) and non-English content. |
 | `/agents/assets.md` | You need the exact path of a logo, image or token file. |
 
